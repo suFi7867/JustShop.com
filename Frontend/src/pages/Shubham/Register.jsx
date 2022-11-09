@@ -9,7 +9,6 @@ import {
   Highlight,
   HStack,
   IconButton,
-  Image,
   Input,
   Spacer,
   Spinner,

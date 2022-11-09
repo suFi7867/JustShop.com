@@ -21,6 +21,7 @@ import {
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import Loader from "../components/SmallComponents/Loader";
+
 // import { AuthContext } from "../Context/AuthContext";
 
 const Login = () => {
