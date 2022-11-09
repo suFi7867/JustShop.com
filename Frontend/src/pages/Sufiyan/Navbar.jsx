@@ -10,7 +10,8 @@ import { Link, NavLink } from 'react-router-dom';
 import { ImAndroid } from 'react-icons/im';
 import SearchBar from './components/SearchBar';
 import SearchBar2 from './components/SearchBar2';
-
+import { VscHeart } from "react-icons/vsc";
+import { IoBagOutline } from "react-icons/io5";
 
 
 const Links = [
@@ -62,7 +63,9 @@ const Navbar = () => {
             style={{ position: "relative", left: "0px",  
             zIndex :"1"}}
             top={{ base: '10px', md: '28px' }}
-             src="https://i.ibb.co/Fqg6dHZ/PROJECT-LOGO-5.png" /></Link>
+            src= { colorMode === "light" ? "https://i.ibb.co/Fqg6dHZ/PROJECT-LOGO-5.png" :"https://i.ibb.co/2t1KBmh/Project-Logo.png"  } />
+             
+             </Link>
           </HStack>
 
      
@@ -91,14 +94,27 @@ const Navbar = () => {
    
              <NavLink to="/login" >
               <Button fontWeight="lighter" colorScheme="messenger" variant='solid'>
-                Get Started Free
+                Register
               </Button>
               </NavLink> 
 
               <IconButton
+             fontSize='25px'
+             borderRadius={50}
+             variant='link'
+             //onClick={toggleColorMode}
+             icon={  <VscHeart  />} />
+
+           <NavLink to="/cart" ><IconButton
+             fontSize='25px'
+             borderRadius={50}
+             variant='link'
+             //onClick={toggleColorMode}
+             icon={  <IoBagOutline  />} /></NavLink>
+              <IconButton
               fontSize='25px'
         borderRadius={50}
-        
+        variant='link'
         onClick={toggleColorMode}
               icon={ colorMode === "light" ? <MdOutlineDarkMode /> : <BsLightbulb/>  } />
 
@@ -107,18 +123,34 @@ const Navbar = () => {
              </Box> 
        : <Box  display={{ base: 'none', md: 'none', lg: 'block' }} >
 
-            <HStack spacing={5} >
+            <HStack spacing={25} >
             <HStack  ><Text color="whiteAlpha.900" fontSize="xl"><ImAndroid  /></Text> 
             <Text fontWeight="semibold" color="whiteAlpha.900">{"userName"}</Text></HStack>
 
              <Button onClick={LogOutUser} fontWeight="lighter" colorScheme="messenger" variant='solid'>
                    LogOut
               </Button>
+
+              <IconButton
+             fontSize='25px'
+             borderRadius={50}
+             variant='link'
+             //onClick={toggleColorMode}
+             icon={  <VscHeart  />} />
+
+           <NavLink to="/cart" ><IconButton
+             fontSize='25px'
+             borderRadius={50}
+             variant='link'
+             //onClick={toggleColorMode}
+             icon={  <IoBagOutline  />} /></NavLink>
+
+             
              
              <IconButton
              fontSize='25px'
              borderRadius={50}
-             
+             variant='link'
              onClick={toggleColorMode}
              icon={ colorMode === "light" ? <MdOutlineDarkMode /> : <BsLightbulb/>  } />
             </HStack>
@@ -134,6 +166,8 @@ const Navbar = () => {
             icon={<AiOutlineMenu />} >
 
             </IconButton>
+
+
 
 
 
@@ -476,12 +510,12 @@ const Navbar = () => {
               <NavLink to="/login">
    
               <Button onClick={()=>onClose()} colorScheme="messenger" variant='outline'>
-                Sign in
+                Log In
               </Button>
               </NavLink>
               <NavLink to="/login">
               <Button  colorScheme="messenger" variant='solid'>
-                Get Started Free
+                Register
               </Button></NavLink>
               </HStack> 
               :
