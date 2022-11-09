@@ -23,10 +23,20 @@ reportWebVitals();
 
 
 
-// npm i react-router-dom
+
 // npm i @chakra-ui/icons
+
+
+// npm i react-hover-image
+// import HoverImage from "react-hover-image";
+
+//  <HoverImage src={yourFile} hoverSrc={yourFileHover} />
 
 // npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 
 // npm i react-icons
 //npm i @chakra-ui/icons
+
+// npm i react-search-autocomplete
+
+// npm i react-custom-scrollbars-2
