@@ -127,7 +127,7 @@ thirdImages:[]
 // womens data
 
     womens:[
-        {id:1,name:" Womens Waterproof Raincoat",quantity:1,defaultImage:" https://i.ibb.co/ZdHnbtK/61-Hagy8e-BL-SY741-SX-UX-SY-UY.jpg",hoverImage:" https://i.ibb.co/6cQdtvw/61kf-IBH7-1-L-SY741-SX-UX-SY-UY.jpg",price:789,strikePrice:1160,
+        {id:11,name:" Womens Waterproof Raincoat",quantity:1,defaultImage:" https://i.ibb.co/ZdHnbtK/61-Hagy8e-BL-SY741-SX-UX-SY-UY.jpg",hoverImage:" https://i.ibb.co/6cQdtvw/61kf-IBH7-1-L-SY741-SX-UX-SY-UY.jpg",price:789,strikePrice:1160,
 firstImages:[ " https://i.ibb.co/LCWtK9j/61-Hagy8e-BL-SY741-SX-UX-SY-UY-1.jpg",
 " https://i.ibb.co/ZdHnbtK/61-Hagy8e-BL-SY741-SX-UX-SY-UY.jpg",
 " https://i.ibb.co/6cQdtvw/61kf-IBH7-1-L-SY741-SX-UX-SY-UY.jpg",
@@ -147,7 +147,7 @@ thirdImages:[" https://i.ibb.co/P1Gs8wh/71tsj-JDHux-L-UX679.jpg",
 
 
 
-{id:2,name:"ASIAN Women's Shoes",quantity:1,defaultImage:"https://i.ibb.co/X7Vqn3t/61f4-Fo-D9-Fp-L-SY695-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/hX1pH2b/61v2-A4-YSOl-L-SY695-SX-UX-SY-UY.jpg",price:499,strikePrice:799,
+{id:12,name:"ASIAN Women's Shoes",quantity:1,defaultImage:"https://i.ibb.co/X7Vqn3t/61f4-Fo-D9-Fp-L-SY695-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/hX1pH2b/61v2-A4-YSOl-L-SY695-SX-UX-SY-UY.jpg",price:499,strikePrice:799,
 firstImages:["https://i.ibb.co/hX1pH2b/61v2-A4-YSOl-L-SY695-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/p3LJ91j/61ku-Pz-R4y-HL-SY695-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/pLGn8M8/61-BUuyl-LUUL-SY695-SX-UX-SY-UY.jpg",
@@ -166,7 +166,7 @@ thirdImages:["https://i.ibb.co/qWFZCGD/617-Htirp-QNL-UY695.jpg",
 },
 
 
-{id:3,name:"dockstreet Sweatshirt Hoodie",quantity:1,defaultImage:"https://i.ibb.co/SwDZdQv/71kd-XCIx49-L-SY741-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/6yMGLhP/61kw63ym-Jt-L-SX679-SX-UX-SY-UY.jpg",price:699,strikePrice:824,
+{id:13,name:"dockstreet Sweatshirt Hoodie",quantity:1,defaultImage:"https://i.ibb.co/SwDZdQv/71kd-XCIx49-L-SY741-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/6yMGLhP/61kw63ym-Jt-L-SX679-SX-UX-SY-UY.jpg",price:699,strikePrice:824,
 firstImages:["https://i.ibb.co/SwDZdQv/71kd-XCIx49-L-SY741-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/6yMGLhP/61kw63ym-Jt-L-SX679-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/6w07prZ/81ys4je1-s-L-SY741-SX-UX-SY-UY-1.jpg",
@@ -186,49 +186,49 @@ thirdImages:["https://i.ibb.co/vsgxPNM/81-KMAk-Qp-Gx-L-UX569-1.jpg",
 },
 
 
-{id:4,name:"Lavie Women's Handbag",quantity:1,defaultImage:"https://i.ibb.co/G0D5Bw0/71-m-GCrbqm-S-SY695-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/GpYPDb1/712-HIk-Jm8-NS-SY695-SX-UX-SY-UY.jpg",price:899,strikePrice:1080,
+{id:14,name:"Lavie Women's Handbag",quantity:1,defaultImage:"https://i.ibb.co/G0D5Bw0/71-m-GCrbqm-S-SY695-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/GpYPDb1/712-HIk-Jm8-NS-SY695-SX-UX-SY-UY.jpg",price:899,strikePrice:1080,
 firstImages:[],
 secondImages:[],
 thirdImages:[]
 },
 
 
-{id:5,name:"TIMEX Analog Women's Watch",quantity:1,defaultImage:"https://i.ibb.co/vzqBjW3/71s4i-4-Kx6-L-SY550-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/NmmRyxG/71q-Lf3q-Lch-L-SY550-SX-UX-SY-UY.jpg",price:2170,strikePrice:2890,
+{id:15,name:"TIMEX Analog Women's Watch",quantity:1,defaultImage:"https://i.ibb.co/vzqBjW3/71s4i-4-Kx6-L-SY550-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/NmmRyxG/71q-Lf3q-Lch-L-SY550-SX-UX-SY-UY.jpg",price:2170,strikePrice:2890,
 firstImages:[],
 secondImages:[],
 thirdImages:[]
 },
 
 
-{id:6,name:"Yellow Chimes Classic Bracelet ",quantity:1,defaultImage:"https://i.ibb.co/p1CRZn9/61dz-Bzx-K5-L-UY625.jpg",hoverImage:"https://i.ibb.co/DVs0gF5/61nh-Walhq-OL-UY625.jpg",price:321,strikePrice:429,
+{id:16,name:"Yellow Chimes Classic Bracelet ",quantity:1,defaultImage:"https://i.ibb.co/p1CRZn9/61dz-Bzx-K5-L-UY625.jpg",hoverImage:"https://i.ibb.co/DVs0gF5/61nh-Walhq-OL-UY625.jpg",price:321,strikePrice:429,
 firstImages:[],
 secondImages:[],
 thirdImages:[]
 },
 
 
-{id:7,name:"SIRIL Women's saree",quantity:1,defaultImage:"https://i.ibb.co/r5mprdZ/61-Q5-KMIJhk-L-SY741-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/RDTfsB6/61hr-VHk-Ju9-L-SY741-SX-UX-SY-UY.jpg",price:1290,strikePrice:1580,
+{id:17,name:"SIRIL Women's saree",quantity:1,defaultImage:"https://i.ibb.co/r5mprdZ/61-Q5-KMIJhk-L-SY741-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/RDTfsB6/61hr-VHk-Ju9-L-SY741-SX-UX-SY-UY.jpg",price:1290,strikePrice:1580,
 firstImages:[],
 secondImages:[],
 thirdImages:[]
 },
 
 
-{id:8,name:"Ethnic Women's Salwar Suit",quantity:1,defaultImage:"https://i.ibb.co/9rwSJRw/61-B0a-U0-Z-L-SY741-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/j8XSNk2/61-GKYe-BWkj-L-SY741-SX-UX-SY-UY.jpg",price:789,strikePrice:1180,
+{id:18,name:"Ethnic Women's Salwar Suit",quantity:1,defaultImage:"https://i.ibb.co/9rwSJRw/61-B0a-U0-Z-L-SY741-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/j8XSNk2/61-GKYe-BWkj-L-SY741-SX-UX-SY-UY.jpg",price:789,strikePrice:1180,
 firstImages:[],
 secondImages:[],
 thirdImages:[]
 },
 
 
-{id:9,name:"Doctor Ortho Slippers for Women.",quantity:1,defaultImage:"https://i.ibb.co/h10HxgN/51g-ADGPRAIL-UX575-1.jpg",hoverImage:"https://i.ibb.co/dQsbtN9/51d-Mc66bc-ZL-UX575.jpg",price:499,strikePrice:629,
+{id:19,name:"Doctor Ortho Slippers for Women.",quantity:1,defaultImage:"https://i.ibb.co/h10HxgN/51g-ADGPRAIL-UX575-1.jpg",hoverImage:"https://i.ibb.co/dQsbtN9/51d-Mc66bc-ZL-UX575.jpg",price:499,strikePrice:629,
 firstImages:[],
 secondImages:[],
 thirdImages:[]
 },
 
 
-{id:10,name:"Sparx Womens Walking Shoes",quantity:1,defaultImage:"https://i.ibb.co/Qrrkx8m/81-Og-N4zwd-L-UX695.jpg",hoverImage:"https://i.ibb.co/6tB50D2/81s-VD78m-Ou-L-UX695.jpg",price:799,strikePrice:1090,
+{id:20,name:"Sparx Womens Walking Shoes",quantity:1,defaultImage:"https://i.ibb.co/Qrrkx8m/81-Og-N4zwd-L-UX695.jpg",hoverImage:"https://i.ibb.co/6tB50D2/81s-VD78m-Ou-L-UX695.jpg",price:799,strikePrice:1090,
 firstImages:[],
 secondImages:[],
 thirdImages:[]
@@ -240,7 +240,7 @@ thirdImages:[]
 
 
     electronics:[
-        {id:1,name:"boAt Airdopes 141 ",quantity:1,defaultImage:"https://i.ibb.co/mzpSm3P/grey-600x.webp",hoverImage:"https://i.ibb.co/n1dRLS5/AD-141-FI-1-3-fa14e3d5-7538-435c-948c-64d624fabdc8-800x.webp",price:1490,strikePrice:2190,
+        {id:21,name:"boAt Airdopes 141 ",quantity:1,defaultImage:"https://i.ibb.co/mzpSm3P/grey-600x.webp",hoverImage:"https://i.ibb.co/n1dRLS5/AD-141-FI-1-3-fa14e3d5-7538-435c-948c-64d624fabdc8-800x.webp",price:1490,strikePrice:2190,
         firstImages:["https://i.ibb.co/yFJVDcB/AD-141-FI-3-2-d337a5ce-9131-4063-a180-9bc77eacd5b9-800x.webp",
         "https://i.ibb.co/CKWXp8V/AD-141-FI-2-2-d6078a63-f047-4ede-954a-b74da96588d1-800x.webp",
         "https://i.ibb.co/sFDH4Rf/AD-141-FI-1-2-3-ccf8a545-4111-4a1e-bf5e-ce085f932965-800x.webp",
@@ -260,7 +260,7 @@ thirdImages:[]
         },
 
 
-        {id:2,name:"boAt Rockerz 255 Pro",quantity:1,defaultImage:"https://i.ibb.co/ScfLJ9q/8654ab35-d654-4a82-a9ff-ddcbebbaf31d-600x.webp",hoverImage:"https://i.ibb.co/0jWJYhj/asap-navy-732952c4-fceb-440b-b6f8-1ac94ea52a2b-800x.webp",price:1290,strikePrice:1590,
+        {id:22,name:"boAt Rockerz 255 Pro",quantity:1,defaultImage:"https://i.ibb.co/ScfLJ9q/8654ab35-d654-4a82-a9ff-ddcbebbaf31d-600x.webp",hoverImage:"https://i.ibb.co/0jWJYhj/asap-navy-732952c4-fceb-440b-b6f8-1ac94ea52a2b-800x.webp",price:1290,strikePrice:1590,
         firstImages:["https://i.ibb.co/tJHRXyv/playback-navy-0aa7114b-ff9d-4148-b14a-138dbc257d1e-800x.webp",
         "https://i.ibb.co/KqqGCpT/ipx5-navy-1aad5624-3c44-42df-9042-99bb0d060af4-800x.webp",
         "https://i.ibb.co/0MFSCTK/drivers-navy-df787026-2ab5-4e85-b7e7-cdfee9d0146c-800x.webp",
@@ -281,7 +281,7 @@ thirdImages:[]
 
 
 
-        {id:3,name:"boAt Watch",quantity:1,defaultImage:"https://i.ibb.co/RpKhHmD/blue-58bd5e28-de95-4f31-909d-6bce484bdbd9-600x.webp",hoverImage:"https://i.ibb.co/p4tq7b4/005-2-800x.webp",price:2170,strikePrice:3290,
+        {id:23,name:"boAt Watch",quantity:1,defaultImage:"https://i.ibb.co/RpKhHmD/blue-58bd5e28-de95-4f31-909d-6bce484bdbd9-600x.webp",hoverImage:"https://i.ibb.co/p4tq7b4/005-2-800x.webp",price:2170,strikePrice:3290,
         firstImages:["https://i.ibb.co/sK9hKgg/004-2-ce2aefa1-ef72-457d-872d-6547bb8bbb7f-800x.webp",
         "https://i.ibb.co/74NG97n/002-2-07f55eee-5e16-4287-bc71-74b40aa0d48f-800x.webp",
         "https://i.ibb.co/p4tq7b4/005-2-800x.webp",
@@ -300,48 +300,48 @@ thirdImages:[]
         },
       
 
-        {id:4,name:"Rockerz 450 DC edition",quantity:1,defaultImage:"  https://i.ibb.co/ZJy0JQX/1-5-600x.webp",hoverImage:"https://i.ibb.co/Qr0GPrz/05-3-800x.webp",price:1490,strikePrice:1990,
+        {id:24,name:"Rockerz 450 DC edition",quantity:1,defaultImage:"  https://i.ibb.co/ZJy0JQX/1-5-600x.webp",hoverImage:"https://i.ibb.co/Qr0GPrz/05-3-800x.webp",price:1490,strikePrice:1990,
         firstImages:[],
         secondImages:[],
         thirdImages:[]
         },
        
 
-        {id:5,name:"boAt Rockerz 355 Pro",quantity:1,defaultImage:"https://i.ibb.co/HTKM2BF/rockerz-518-blue-600x.webp",hoverImage:" https://i.ibb.co/86J3Gmf/Dual-Mode-ddc40b42-2e31-4e0d-8081-07301eb1ca4e-800x.webp",price:1590,strikePrice:2290,
+        {id:25,name:"boAt Rockerz 355 Pro",quantity:1,defaultImage:"https://i.ibb.co/HTKM2BF/rockerz-518-blue-600x.webp",hoverImage:" https://i.ibb.co/86J3Gmf/Dual-Mode-ddc40b42-2e31-4e0d-8081-07301eb1ca4e-800x.webp",price:1590,strikePrice:2290,
         firstImages:[],
         secondImages:[],
         thirdImages:[]
         },
        
 
-        {id:6,name:"boAt Rockerz 450R",quantity:1,defaultImage:"https://i.ibb.co/jk8Pt7B/eb8e0fbd-c412-48b3-9c91-5b49ddf35800-17432771-6821-4dbf-86ac-9cb7c8dfe460-600x.webp",hoverImage:" https://i.ibb.co/xYdKfT9/drivers-blue-e11cfd3a-d2b1-4b76-8676-f2b1e8813849-800x.webp",price:1890,strikePrice:2990,
+        {id:26,name:"boAt Rockerz 450R",quantity:1,defaultImage:"https://i.ibb.co/jk8Pt7B/eb8e0fbd-c412-48b3-9c91-5b49ddf35800-17432771-6821-4dbf-86ac-9cb7c8dfe460-600x.webp",hoverImage:" https://i.ibb.co/xYdKfT9/drivers-blue-e11cfd3a-d2b1-4b76-8676-f2b1e8813849-800x.webp",price:1890,strikePrice:2990,
         firstImages:[],
         secondImages:[],
         thirdImages:[]
         },
       
-        {id:7,name:"boAt Wave Pro ",quantity:1,defaultImage:"  https://i.ibb.co/mBBkyvw/main3-4d128bbd-a1e7-4045-a5c5-25c744f3133f-600x.webp",hoverImage:"https://i.ibb.co/k4JNXM2/Wave-Pro-FI-Blue4-14faa9f4-c87f-4271-a44b-ec8522ee70eb-800x.webp",price:3490,strikePrice:4990,
+        {id:27,name:"boAt Wave Pro ",quantity:1,defaultImage:"  https://i.ibb.co/mBBkyvw/main3-4d128bbd-a1e7-4045-a5c5-25c744f3133f-600x.webp",hoverImage:"https://i.ibb.co/k4JNXM2/Wave-Pro-FI-Blue4-14faa9f4-c87f-4271-a44b-ec8522ee70eb-800x.webp",price:3490,strikePrice:4990,
         firstImages:[],
         secondImages:[],
         thirdImages:[]
         },
     
 
-        {id:8,name:"boAt Earphone 250",quantity:1,defaultImage:"    https://i.ibb.co/F483H5w/3-30fc6c73-8b14-432f-8419-322dc2e8a42c-480x.webp",hoverImage:"https://i.ibb.co/LQwg88g/4-5649e20a-0b38-41a1-b505-a7d433367208-655x.webp",price:459,strikePrice:699,
+        {id:28,name:"boAt Earphone 250",quantity:1,defaultImage:"    https://i.ibb.co/F483H5w/3-30fc6c73-8b14-432f-8419-322dc2e8a42c-480x.webp",hoverImage:"https://i.ibb.co/LQwg88g/4-5649e20a-0b38-41a1-b505-a7d433367208-655x.webp",price:459,strikePrice:699,
         firstImages:[],
         secondImages:[],
         thirdImages:[]
         },
        
 
-        {id:9,name:"boAt wireless 375",quantity:1,defaultImage:" https://i.ibb.co/c6GW0Xx/airdopes-171-blue-c6dc7d5b-da81-40a0-9946-1c3ceab16c18-600x.webp",hoverImage:"https://i.ibb.co/ByrWgvr/mic-1-2-60b7b839-ae26-492c-ba3b-522a3c98b5e9-800x.webp",price:1690,strikePrice:3290,
+        {id:29,name:"boAt wireless 375",quantity:1,defaultImage:" https://i.ibb.co/c6GW0Xx/airdopes-171-blue-c6dc7d5b-da81-40a0-9946-1c3ceab16c18-600x.webp",hoverImage:"https://i.ibb.co/ByrWgvr/mic-1-2-60b7b839-ae26-492c-ba3b-522a3c98b5e9-800x.webp",price:1690,strikePrice:3290,
         firstImages:[],
         secondImages:[],
         thirdImages:[]
         },
        
 
-        {id:10,name:"boAt Stone 190 DC Edition",quantity:1,defaultImage:" https://i.ibb.co/vVmFVJB/S190-FI-DC-Superman02-800x.webp",hoverImage:"https://i.ibb.co/qj56RCy/S190-FI-DC-Superman03-800x.webp",price:1790,strikePrice:2890,
+        {id:30,name:"boAt Stone 190 DC Edition",quantity:1,defaultImage:" https://i.ibb.co/vVmFVJB/S190-FI-DC-Superman02-800x.webp",hoverImage:"https://i.ibb.co/qj56RCy/S190-FI-DC-Superman03-800x.webp",price:1790,strikePrice:2890,
         firstImages:[],
         secondImages:[],
         thirdImages:[]

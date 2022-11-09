@@ -13,7 +13,7 @@ const navigateToSingleProductPage=(id)=>{
 
 
     return(
-<Stack onClick={()=>navigateToSingleProductPage(id)} border={"2.2px solid whitesmoke"} style={{ display:"flex", flexDirection:"column", justifyContent:"space-between"}} >
+<Stack onClick={()=>navigateToSingleProductPage(id)} border={"2.6px solid whitesmoke"} style={{ display:"flex", flexDirection:"column", justifyContent:"space-between"}} >
       
       <Image 
       
@@ -31,7 +31,7 @@ const navigateToSingleProductPage=(id)=>{
         <Text fontWeight="bold"  fontSize={{base:"l",md:"xl",lg:"2xl"}} >Price:-</Text> 
          <Text fontWeight="bold"  fontSize={{base:"l",md:"xl",lg:"2xl"}} color="#0D6DD7"  >₹{price}</Text>
        
-        <Text as="s" marginLeft={4} marginTop={1}   fontSize={{base:"13px",md:"15px",lg:"1.1rem"}}>₹{strikePrice}</Text>
+        <Text as="s" marginLeft={4} marginTop={1} paddingBottom={5}  fontSize={{base:"13px",md:"15px",lg:"1.1rem"}}>₹{strikePrice}</Text>
         </Flex>
 
        </VStack>
