@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Navbar from './pages/Sufiyan/Navbar';
 import AllRoutes from './routes/AllRoutes';
+
 
 function App() {
   return (

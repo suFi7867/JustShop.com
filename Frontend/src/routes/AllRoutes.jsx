@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+
 import LandingPage from '../pages/Akanksha/LandingPage'
 import Cart from '../pages/Akash/Cart'
 import Electronic from '../pages/Ankit/Electronic'
@@ -54,7 +55,7 @@ const AllRoutes = () => {
             element={   <Payment /> } />
 
             <Route path='/OrderSuccessfull' 
-            element={    <PurchaseSucessfull />  }  />
+            element={<PurchaseSucessfull /> }  />
 
         </Routes>
       
