@@ -95,7 +95,7 @@ const SingleProduct = () => {
  
     setData(obj)
     
-     setImage(obj.firstImages[4])
+     setImage(obj.firstImages[0])
      setAllimages(obj.firstImages)
      setFirstImg(obj.firstImages)
      setSecondImg(obj.secondImages)
@@ -200,32 +200,32 @@ const SingleProduct = () => {
           <IconButton 
 onClick={()=>{
   setAllimages(FirstImg)
-   setImage(FirstImg[4])
+   setImage(FirstImg[0])
   }}
           variant="ghost"
           w={{base:"40px", lg:"50px"}}
            h={{base:"40px", lg:"50px"}}
            
           >
-          <Image src={`${FirstImg[4]}`} />
+          <Image src={`${FirstImg[0]}`} />
           </IconButton>
           <IconButton 
         onClick={()=>{
           setAllimages(SecondImg)
-           setImage(SecondImg[4])
+           setImage(SecondImg[0])
           }}
           variant="ghost" 
           w={{base:"40px", lg:"50px"}} h={{base:"40px", lg:"50px"}} 
            >
-          <Image src={`${SecondImg[4]}`} />
+          <Image src={`${SecondImg[0]}`} />
           </IconButton>
           <IconButton
           onClick={()=>{
             setAllimages(ThirdImg)
-             setImage(ThirdImg[4])
+             setImage(ThirdImg[0])
             }}
           w={{base:"40px", lg:"50px"}} h={{base:"40px", lg:"50px"}}  >
-          <Image src={`${ThirdImg[4]}`} />
+          <Image src={`${ThirdImg[0]}`} />
           </IconButton>
 
        

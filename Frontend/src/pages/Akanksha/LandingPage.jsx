@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Banner from "./Components/Banner"
-import Brands from './Components/Brands';
-import MenSection from './Components/MenSection';
-import WomenSection from './Components/WomenSection';
-import ElectronicSection from './Components/ElectronicSection';
-import FlexItems from './Components/FlexItems'
-import Why from './Components/Why';
+
+import Brands from './components/Brands';
+import MenSection from './components/MenSection';
+import WomenSection from './components/WomenSection';
+import ElectronicSection from './components/ElectronicSection';
+import FlexItems from './components/FlexItems'
+import Why from './components/Why';
 
 import Banner from "./components/Banner"
 

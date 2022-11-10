@@ -6,8 +6,7 @@
 
 
 
-export let CartDataToMatch=[
-    // mens data
+export let CartDataToMatch = [
 
 {id:1,name:"Symbol Men Casual Shirt",quantity:1,defaultImage:"https://i.ibb.co/X5fn1v7/71f-Dx-CFXJXL-SX569-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/sFmzN2j/61-CF-f-F-1q-L-SX569-SX-UX-SY-UY.jpg",price:529,strikePrice:1390,rating:4,
 firstImages:["https://i.ibb.co/n10gPsZ/71f-Dx-CFXJXL-SX569-SX-UX-SY-UY.jpg",
@@ -32,11 +31,13 @@ firstImages:["https://i.ibb.co/hZwnt4r/81-HY85-Smt-JL-SX569-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/bzwDkGj/81p-BHF0c9-VL-SX569-SX-UX-SY-UY-1.jpg",
 "https://i.ibb.co/mTq6StJ/91-WMr-GJoz-LL-SX569-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/bzwDkGj/81p-BHF0c9-VL-SX569-SX-UX-SY-UY-1.jpg"],
-secondImages:["https://i.ibb.co/2jNvWvW/91e-E7ds-TI3-L-SX569-SX-UX-SY-UY.jpg",
+secondImages:["https://i.ibb.co/h8fY9Mq/81-YMn-zer-JL-SX569-SX-UX-SY-UY.jpg",
+"https://i.ibb.co/QKMFG51/81cu-Ryw-In-L-SX569-SX-UX-SY-UY.jpg",
+"https://i.ibb.co/2jNvWvW/91e-E7ds-TI3-L-SX569-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/4ffK2vr/91-JESYMA67-L-SX569-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/qjzJ2bQ/71-FQB8us-Af-L-SX569-SX-UX-SY-UY.jpg",
-"https://i.ibb.co/QKMFG51/81cu-Ryw-In-L-SX569-SX-UX-SY-UY.jpg",
-"https://i.ibb.co/h8fY9Mq/81-YMn-zer-JL-SX569-SX-UX-SY-UY.jpg"],
+
+],
 thirdImages:["https://i.ibb.co/vJRrXKY/71sy-ZWvc9i-L-UX569.jpg",
 "https://i.ibb.co/SxcmhMJ/81n-Mm-ZBo-Sl-L-UX569.jpg",
 "https://i.ibb.co/MsCg15C/81f-PETf-LF5-L-UX569.jpg",
@@ -68,17 +69,17 @@ firstImages:["https://i.ibb.co/m4xpWLJ/81-MNegd-J57-L-SX695-SX-UX-SY-UY-1.jpg",
 "https://i.ibb.co/X7hpgnJ/81j-O0j1qf5-L-SX695-SX-UX-SY-UY.jpg",
 
 "https://i.ibb.co/m4xpWLJ/81-MNegd-J57-L-SX695-SX-UX-SY-UY-1.jpg",],
-secondImages:[
+secondImages:["https://i.ibb.co/7Y38tS8/712-Xuv-GI2-ML-SX695-SX-UX-SY-UY.jpg",
     "https://i.ibb.co/cygCtsG/617-Zss-RMc-VL-SX695-SX-UX-SY-UY.jpg",
     "https://i.ibb.co/J5VFqFg/71cvl-JOk-Sw-L-SX695-SX-UX-SY-UY.jpg",
-    "https://i.ibb.co/7Y38tS8/712-Xuv-GI2-ML-SX695-SX-UX-SY-UY.jpg",
+    
     "https://i.ibb.co/28ZJkvC/61kqb-WOh-Zm-L-SY695-SX-UX-SY-UY.jpg",
     "https://i.ibb.co/cTd56yh/61h-BVn-Wi-KGL-SX695-SX-UX-SY-UY.jpg",],
-thirdImages:[
+thirdImages:["https://i.ibb.co/BjKb8ZG/51-P5-FKI7i2-L-UY695.jpg",
     "https://i.ibb.co/NTjbxBD/514dhgt-An-GL-UY695.jpg",
     "https://i.ibb.co/fD6HRBy/51h9z-Zvx58-L-UY695.jpg",
     "https://i.ibb.co/rsSbRdb/51m-Sb-A-GCy-L-UY695.jpg",
-    "https://i.ibb.co/BjKb8ZG/51-P5-FKI7i2-L-UY695.jpg",
+    
     "https://i.ibb.co/SdhYc2T/51g6-S2-Xo-Ac-L-UY695.jpg"]},
 
 
@@ -130,14 +131,16 @@ firstImages:[" https://i.ibb.co/KVhjZ1p/61-WLqy-VIh-CL-SY741-SX-UX-SY-UY.jpg",
 " https://i.ibb.co/6cQdtvw/61kf-IBH7-1-L-SY741-SX-UX-SY-UY.jpg",
 " https://i.ibb.co/T8pPj7p/61w-ZXk-UGxr-L-SY741-SX-UX-SY-UY.jpg",
 ],
-secondImages:[  " https://i.ibb.co/tLWcd7R/7110-Bz-Lq-Zk-L-SX679-SX-UX-SY-UY.jpg",
-" https://i.ibb.co/qxpCtYr/61ne3jwh-CTL-SY741-SX-UX-SY-UY.jpg",
+secondImages:[" https://i.ibb.co/qxpCtYr/61ne3jwh-CTL-SY741-SX-UX-SY-UY.jpg",
+  " https://i.ibb.co/tLWcd7R/7110-Bz-Lq-Zk-L-SX679-SX-UX-SY-UY.jpg",
+
 " https://i.ibb.co/PWjzws7/61-R-r443n-PL-SY741-SX-UX-SY-UY.jpg",
 " https://i.ibb.co/48G5Hdb/611xx-Bc-JH3-L-SY741-SX-UX-SY-UY.jpg",
 " https://i.ibb.co/0QVtz1S/61-Rn-Pkr7-YYL-SY741-SX-UX-SY-UY.jpg",],
-thirdImages:[" https://i.ibb.co/P1Gs8wh/71tsj-JDHux-L-UX679.jpg",
+thirdImages:[" https://i.ibb.co/PGk2jmx/61-Dx-RPSP2-HL-UY741.jpg",
+" https://i.ibb.co/P1Gs8wh/71tsj-JDHux-L-UX679.jpg",
 " https://i.ibb.co/CWh5vRh/6138-E2-Ld-Ep-L-UY741.jpg",
-" https://i.ibb.co/PGk2jmx/61-Dx-RPSP2-HL-UY741.jpg",
+
 " https://i.ibb.co/gwCLsks/61-DPbh0-BCx-L-UY741.jpg",
 " https://i.ibb.co/zN6TZ8B/61q-FYGb7n9-L-UY741.jpg",]
 },
@@ -151,16 +154,19 @@ firstImages:["https://i.ibb.co/X7Vqn3t/61f4-Fo-D9-Fp-L-SY695-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/pLGn8M8/61-BUuyl-LUUL-SY695-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/x6xyw9G/61-Pa-FDc-MNr-L-SY695-SX-UX-SY-UY.jpg",
 ],
-secondImages:["https://i.ibb.co/nmhQZZ9/71-Ry-Ukpd0-OL-SY695-SX-UX-SY-UY.jpg",
+secondImages:["https://i.ibb.co/LRZWm8T/61pm-Ivqp-XLL-SY695-SX-UX-SY-UY.jpg",
+"https://i.ibb.co/nmhQZZ9/71-Ry-Ukpd0-OL-SY695-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/WnHBn9w/61-UM2-Dm-XUg-L-SY695-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/WPv2JHw/51-YSGRJyth-L-SY695-SX-UX-SY-UY-1.jpg",
 "https://i.ibb.co/WPv2JHw/51-YSGRJyth-L-SY695-SX-UX-SY-UY-1.jpg",
-"https://i.ibb.co/LRZWm8T/61pm-Ivqp-XLL-SY695-SX-UX-SY-UY.jpg",],
+],
 thirdImages:["https://i.ibb.co/qWFZCGD/617-Htirp-QNL-UY695.jpg",
+"https://i.ibb.co/5X3CcsM/71-IR1-Wwv-Jk-L-UY695.jpg",
+
 "https://i.ibb.co/F7387sd/71ll2-UZXy4-L-UY695.jpg",
 "https://i.ibb.co/7C8v3fM/61n-Jo-Be-Dp-YL-UY695.jpg",
 "https://i.ibb.co/RPSR4yd/81-Zw-VGw-Bk-L-UX695.jpg",
-"https://i.ibb.co/5X3CcsM/71-IR1-Wwv-Jk-L-UY695.jpg",]
+]
 },
 
 
@@ -170,15 +176,16 @@ firstImages:["https://i.ibb.co/SwDZdQv/71kd-XCIx49-L-SY741-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/6w07prZ/81ys4je1-s-L-SY741-SX-UX-SY-UY-1.jpg",
 "https://i.ibb.co/1swJ4w3/81ys4je1-s-L-SY741-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/KLHPBFt/7154d-ZYR-AL-SY741-SX-UX-SY-UY.jpg",],
-secondImages:[
+secondImages:["https://i.ibb.co/Kqp0hRj/61vu-UZDOKk-L-SY741-SX-UX-SY-UY.jpg",
     "https://i.ibb.co/M6yrSHf/616na-PKLNOL-SY741-SX-UX-SY-UY.jpg",
-    "https://i.ibb.co/Kqp0hRj/61vu-UZDOKk-L-SY741-SX-UX-SY-UY.jpg",
+    
     "https://i.ibb.co/V0FhJyy/61ti-V5n176-L-SY741-SX-UX-SY-UY.jpg",
     "https://i.ibb.co/YpMsM6L/61-FTX2e-ZSy-L-SY741-SX-UX-SY-UY-1.jpg",
     "https://i.ibb.co/b77YSmG/61-FTX2e-ZSy-L-SY741-SX-UX-SY-UY.jpg",],
-thirdImages:["https://i.ibb.co/vsgxPNM/81-KMAk-Qp-Gx-L-UX569-1.jpg",
+thirdImages:["https://i.ibb.co/BsVNGWM/71s-XWR-i8-CL-UY741.jpg",
+"https://i.ibb.co/vsgxPNM/81-KMAk-Qp-Gx-L-UX569-1.jpg",
 "https://i.ibb.co/myPR2Dy/818-Av-Om-k-TL-UY741.jpg",
-"https://i.ibb.co/BsVNGWM/71s-XWR-i8-CL-UY741.jpg",
+
 "https://i.ibb.co/WgzGhdF/81friw-Ie-WQL-UY741.jpg",
 "https://i.ibb.co/vsgxPNM/81-KMAk-Qp-Gx-L-UX569-1.jpg"]
 },
@@ -232,7 +239,6 @@ firstImages:[],
 secondImages:[],
 thirdImages:[]
 },
-
         {id:21,name:"boAt Airdopes 141 ",quantity:1,defaultImage:"https://i.ibb.co/mzpSm3P/grey-600x.webp",hoverImage:"https://i.ibb.co/vP7gJ5M/white-600x.webp",price:1490,strikePrice:2190,rating:4,
         firstImages:[ "https://i.ibb.co/mzpSm3P/grey-600x.webp",
         "https://i.ibb.co/yFJVDcB/AD-141-FI-3-2-d337a5ce-9131-4063-a180-9bc77eacd5b9-800x.webp",
@@ -240,17 +246,18 @@ thirdImages:[]
         "https://i.ibb.co/sFDH4Rf/AD-141-FI-1-2-3-ccf8a545-4111-4a1e-bf5e-ce085f932965-800x.webp",
         "https://i.ibb.co/n1dRLS5/AD-141-FI-1-3-fa14e3d5-7538-435c-948c-64d624fabdc8-800x.webp",
        ],
-        secondImages:["https://i.ibb.co/mb5JsX2/AD-141-FI-3-1-130d5490-85ba-47c3-9b9c-f96817325533-800x.webp",
+        secondImages:["https://i.ibb.co/r3nQhzM/white-600x.webp",
+        "https://i.ibb.co/mb5JsX2/AD-141-FI-3-1-130d5490-85ba-47c3-9b9c-f96817325533-800x.webp",
         "https://i.ibb.co/ZBc1StH/AD-141-FI-2-3-45b033c9-9f39-440b-a033-2abb0bda0c6b-800x.webp",
         "https://i.ibb.co/3WTbNZJ/AD-141-FI-1-2-2-7a8923bd-05d5-4e5e-b364-f788ce7a7e43-800x.webp",
         "https://i.ibb.co/55nxKP3/AD-141-FI-1-2-71c44a8c-2006-472c-bd6a-bdaf150bc5a5-800x.webp",
-        "https://i.ibb.co/r3nQhzM/white-600x.webp",],
-        thirdImages:[
+        ],
+        thirdImages:["https://i.ibb.co/G72NnmP/back-600x.webp",
             "https://i.ibb.co/VBt9Py7/AD-141-FI-3-25e4be39-aa68-4c07-94de-75afabaeef11-800x.webp",
             "https://i.ibb.co/Cmn9YJX/AD-141-FI-2-5f7d05ca-6358-4ff8-899f-c6720e201a72-800x.webp",
             "https://i.ibb.co/G7BKWNN/AD-141-FI-1-2-d9489be8-8f88-4832-991d-28b012711719-800x.webp",
             "https://i.ibb.co/FX1XcY0/AD-141-FI-1f060ff5-cbbf-43f3-b673-41e4aacc7d79-800x.webp",
-            "https://i.ibb.co/G72NnmP/back-600x.webp",]
+            ]
         },
 
 
@@ -261,17 +268,18 @@ thirdImages:[]
         "https://i.ibb.co/0MFSCTK/drivers-navy-df787026-2ab5-4e85-b7e7-cdfee9d0146c-800x.webp",
         "https://i.ibb.co/0jWJYhj/asap-navy-732952c4-fceb-440b-b6f8-1ac94ea52a2b-800x.webp",
         ],
-        secondImages:["https://i.ibb.co/NtRRDM7/ipx5-teal-ab87ab8e-cff0-4a0a-a15c-e7850617576b-800x-1.webp",
+        secondImages:["https://i.ibb.co/DRN66jF/1be19528-6d06-4cab-8815-02618b93d3c9-600x.webp",
+        "https://i.ibb.co/NtRRDM7/ipx5-teal-ab87ab8e-cff0-4a0a-a15c-e7850617576b-800x-1.webp",
         "https://i.ibb.co/C7Pphwr/ipx5-teal-ab87ab8e-cff0-4a0a-a15c-e7850617576b-800x.webp",
         "https://i.ibb.co/YXXGC5m/drivers-teal-61252f12-aeac-4e04-957a-0f2ca2dca4e5-800x.webp",
         "https://i.ibb.co/LvTRCg5/asap-teal-45ff5553-c489-42a4-8b49-e2fc598bf862-800x.webp",
-        "https://i.ibb.co/DRN66jF/1be19528-6d06-4cab-8815-02618b93d3c9-600x.webp",],
-        thirdImages:[
+        ],
+        thirdImages:[     "https://i.ibb.co/XjJnzXJ/756866f0-25e4-4b5d-8b7c-546c2111da69-600x.webp",
             "https://i.ibb.co/kXZ41SW/playback-red-5c79f775-dc8f-4116-9eba-1b012e647490-800x.webp",
             "https://i.ibb.co/ZSwV7RD/ipx5-red-b8dac271-f083-407b-9382-a32464f95ffc-800x.webp",
             "https://i.ibb.co/GW1BC6m/drivers-red-896425ae-7d1b-4469-8597-ee0d49ed6d54-800x.webp",
             "https://i.ibb.co/4TnVS6Z/asap-red-56382970-abfe-4896-ba96-378ab66f1484-800x.webp",
-            "https://i.ibb.co/XjJnzXJ/756866f0-25e4-4b5d-8b7c-546c2111da69-600x.webp",]
+       ]
         },
 
 
@@ -283,16 +291,18 @@ thirdImages:[]
         "https://i.ibb.co/p4tq7b4/005-2-800x.webp",
         "https://i.ibb.co/K2603nM/001-2-855abb6f-8ae6-412b-a030-2cb82006d717-800x.webp",
        ],
-        secondImages:["https://i.ibb.co/68vvhSt/002-3-800x-1.webp",
+        secondImages:[  "https://i.ibb.co/FhJwdXS/Green-6c922a0e-c3a0-46bc-a3dc-113a89a82207-600x.webp",
+        "https://i.ibb.co/68vvhSt/002-3-800x-1.webp",
         "https://i.ibb.co/Bj0ZCTf/002-3-800x.webp",
         "https://i.ibb.co/27p47TN/005-3-800x.webp",
         "https://i.ibb.co/ZNDYDsX/001-3-800x.webp",
-        "https://i.ibb.co/FhJwdXS/Green-6c922a0e-c3a0-46bc-a3dc-113a89a82207-600x.webp",],
-        thirdImages:["https://i.ibb.co/dBw4FGh/004-8cabd448-5ff8-4227-9d2f-96b1d7c686cd-800x.webp",
+      ],
+        thirdImages:["https://i.ibb.co/jhYYqkV/Untitled-5-600x.webp",
+        "https://i.ibb.co/dBw4FGh/004-8cabd448-5ff8-4227-9d2f-96b1d7c686cd-800x.webp",
         "https://i.ibb.co/6bCt0jN/002-ea5f69f6-2cff-4168-9529-7d53f256d32d-800x.webp",
         "https://i.ibb.co/5cVmX6L/005-a226d1dd-6277-405a-b9a5-031a588f5a9c-800x.webp",
         "https://i.ibb.co/qrRNPJF/001-427f42b5-e6df-4fc5-a025-1db1f9eb2117-800x.webp",
-        "https://i.ibb.co/jhYYqkV/Untitled-5-600x.webp"]
+        ]
         },
       
 
@@ -343,6 +353,6 @@ rating:4,        firstImages:[],
         secondImages:[],
         thirdImages:[]
         }
-  
+ 
     ]
-//console.log(productData)
+

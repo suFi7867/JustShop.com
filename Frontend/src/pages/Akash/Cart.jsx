@@ -32,7 +32,7 @@ const Cart = () => {
         lg: "12",
       }}
     >
-       <h1>a</h1>
+     
       <Stack
         direction={{
           base: "column",

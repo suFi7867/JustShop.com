@@ -40,4 +40,7 @@ reportWebVitals();
 
 // npm i react-custom-scrollbars-2
 
-// 
+
+// npm i redux react-redux redux-thunk
+// npm i axios
+//npm i react-multi-carousel

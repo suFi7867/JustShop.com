@@ -345,8 +345,8 @@ thirdImages:[]
         secondImages:[],
         thirdImages:[]
         },
-        {id:28,name:"boAt Earphone 250",quantity:1,defaultImage:"https://i.ibb.co/F483H5w/3-30fc6c73-8b14-432f-8419-322dc2e8a42c-480x.webp",hoverImage:"https://i.ibb.co/LQwg88g/4-5649e20a-0b38-41a1-b505-a7d433367208-655x.webp",price:459,strikePrice:699,
-        firstImages:[],
+       
+       
         {id:28,name:"boAt Earphone 250",quantity:1,defaultImage:" https://i.ibb.co/5MS0BwD/boat-bassheads-102-red-600x.webp",hoverImage:" https://i.ibb.co/smgnNqg/boat-bassheads-102-black-600x.webp",price:459,strikePrice:699,
 rating:4,        firstImages:[],
         secondImages:[],
