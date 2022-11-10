@@ -28,12 +28,19 @@ const Links = [
     {
         name:"Electronics",
         path:"/electronics"
-    }
+    }, 
+    
+    {
+      name:"About Us",
+      path:"/about"
+  }, 
+  
+
 ]
 
 const Navbar = () => {
 
-  const isAuth = false
+  const isAuth = true
 
     const { colorMode, toggleColorMode } = useColorMode()
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -221,307 +228,56 @@ const Navbar = () => {
              
              </DrawerHeader>
           <DrawerBody  >
-
-          <Accordion>
-
-             {
-              isAuth &&   <AccordionItem>
+          {isAuth && 
               
-            <VStack >
-            <Image borderRadius={12} marginTop="10px"  w={150} src='https://i.im.ge/2022/07/29/FwZXw1.jpg' ></Image>
-            <HStack  >
-              <Text fontSize="xl"><ImAndroid  /></Text> 
-            <Text fontWeight="semibold" >{"userName"}</Text></HStack>
-            
-            </VStack>
-
-
-          </AccordionItem>
-             }
-
+              <VStack >
+              <Image borderRadius={12} marginTop="10px"  w={150} src='https://i.im.ge/2022/07/29/FwZXw1.jpg' ></Image>
+              <HStack  >
+                <Text fontSize="xl"><ImAndroid  /></Text> 
+              <Text fontWeight="semibold" >{"userName"}</Text></HStack>
               
-               <AccordionItem>
-              
-                   <AccordionButton>
-                     <Box flex='1' textAlign='left'>
-                     <Text fontWeight="semibold" fontSize="md" >
-                       Product  
-                        </Text>
-                     </Box>
-                     <AccordionIcon />
-                   </AccordionButton>
-              
-                 <AccordionPanel  pb={4}>
-
-                   <VStack alignItems="left" >
-
-                    <Link to="/" onClick={()=>onClose()} >
-                    <Flex alignItems="center" > 
-                         <IconButton  color="red.500" 
-                         icon= {<MdEditNotifications/>} bg="none" />
-                          <Text>Products</Text>
-                   </Flex></Link> 
-                   <Divider />
-                   
-                   <Link to="/WhyHotjar" onClick={()=>onClose()} >
-                   <Flex alignItems="center" > 
-                         <IconButton  color="red.500" 
-                         icon= {<MdFeed/>} bg="none" />
-                           <Text>WhyHotJar</Text>
-                   </Flex></Link> 
-                   <Divider />
-                   <Link to="/pricing" onClick={()=>onClose()} >
-                   <Flex alignItems="center" > 
-                         <IconButton color="red.500" 
-                         icon= {<MdDynamicFeed/>} bg="none" />
-                          <Text>Pricing</Text>
-                   </Flex></Link> 
-                   <Divider />
-                   <Link to="/about" onClick={()=>onClose()} >
-                   <Flex alignItems="center" > 
-                         <IconButton color="red.500" 
-                         icon= {<MdEco/>} bg="none" />
-                        <Text>About</Text>
-                   </Flex></Link>
-                   <Divider />
-                 
-
-                   </VStack>
-
-                 </AccordionPanel>
-
-
-               </AccordionItem>
-
-                <AccordionItem>
-              
-                   <AccordionButton>
-                     <Box flex='1' textAlign='left'>
-                     <Text fontWeight="semibold" fontSize="md" >
-                       Why HotJar  
-                        </Text>
-                     </Box>
-                     <AccordionIcon />
-                   </AccordionButton>
-          
-                   <AccordionPanel  pb={4}>
-
-<VStack alignItems="left" >
-
- <Link to="/" onClick={()=>onClose()} >
- <Flex alignItems="center" > 
-      <IconButton  color="red.500" 
-      icon= {<MdEditNotifications/>} bg="none" />
-       <Text>Products</Text>
-</Flex></Link> 
-<Divider />
-
-<Link to="/WhyHotjar" onClick={()=>onClose()} >
-<Flex alignItems="center" > 
-      <IconButton  color="red.500" 
-      icon= {<MdFeed/>} bg="none" />
-        <Text>WhyHotJar</Text>
-</Flex></Link> 
-<Divider />
-<Link to="/pricing" onClick={()=>onClose()} >
-<Flex alignItems="center" > 
-      <IconButton color="red.500" 
-      icon= {<MdDynamicFeed/>} bg="none" />
-       <Text>Pricing</Text>
-</Flex></Link> 
-<Divider />
-<Link to="/about" onClick={()=>onClose()} >
-<Flex alignItems="center" > 
-      <IconButton color="red.500" 
-      icon= {<MdEco/>} bg="none" />
-     <Text>About</Text>
-</Flex></Link>
-<Divider />
-
-
-</VStack>
-
-</AccordionPanel>
-
-
-
-                 
-               </AccordionItem>
-
-               
-                <AccordionItem>
-              
-              <AccordionButton>
-                <Box flex='1' textAlign='left'>
-                <Text fontWeight="semibold" fontSize="md" >
-                  Pricing  
-                   </Text>
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-         
+              </VStack>
   
-              <AccordionPanel  pb={4}>
-
-<VStack alignItems="left" >
-
- <Link to="/" onClick={()=>onClose()} >
- <Flex alignItems="center" > 
-      <IconButton  color="red.500" 
-      icon= {<MdEditNotifications/>} bg="none" />
-       <Text>Products</Text>
-</Flex></Link> 
-<Divider />
-
-<Link to="/WhyHotjar" onClick={()=>onClose()} >
-<Flex alignItems="center" > 
-      <IconButton  color="red.500" 
-      icon= {<MdFeed/>} bg="none" />
-        <Text>WhyHotJar</Text>
-</Flex></Link> 
-<Divider />
-<Link to="/pricing" onClick={()=>onClose()} >
-<Flex alignItems="center" > 
-      <IconButton color="red.500" 
-      icon= {<MdDynamicFeed/>} bg="none" />
-       <Text>Pricing</Text>
-</Flex></Link> 
-<Divider />
-<Link to="/about" onClick={()=>onClose()} >
-<Flex alignItems="center" > 
-      <IconButton color="red.500" 
-      icon= {<MdEco/>} bg="none" />
-     <Text>About</Text>
-</Flex></Link>
-<Divider />
-
-
-</VStack>
-
-</AccordionPanel>
-
-
-
-            
-               </AccordionItem>
-
-               <AccordionItem>
-              
-              <AccordionButton>
-                <Box flex='1' textAlign='left'>
-                <Text fontWeight="semibold" fontSize="md">
-                  Learn  
-                   </Text>
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-         
-           
-              <AccordionPanel  pb={4}>
-
-<VStack alignItems="left" >
-
- <Link to="/" onClick={()=>onClose()} >
- <Flex alignItems="center" > 
-      <IconButton  color="red.500" 
-      icon= {<MdEditNotifications/>} bg="none" />
-       <Text>Products</Text>
-</Flex></Link> 
-<Divider />
-
-<Link to="/WhyHotjar" onClick={()=>onClose()} >
-<Flex alignItems="center" > 
-      <IconButton  color="red.500" 
-      icon= {<MdFeed/>} bg="none" />
-        <Text>WhyHotJar</Text>
-</Flex></Link> 
-<Divider />
-<Link to="/pricing" onClick={()=>onClose()} >
-<Flex alignItems="center" > 
-      <IconButton color="red.500" 
-      icon= {<MdDynamicFeed/>} bg="none" />
-       <Text>Pricing</Text>
-</Flex></Link> 
-<Divider />
-<Link to="/about" onClick={()=>onClose()} >
-<Flex alignItems="center" > 
-      <IconButton color="red.500" 
-      icon= {<MdEco/>} bg="none" />
-     <Text>About</Text>
-</Flex></Link>
-<Divider />
-
-
-</VStack>
-
-</AccordionPanel>
-
-
-
-            
-            
-               </AccordionItem>
-
-               <AccordionItem>
-              
-              <AccordionButton>
-                <Box flex='1' textAlign='left'>
-                <Text fontWeight="semibold" fontSize="md" >
-                  suFi  
-                   </Text>
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-         
-           
-              <AccordionPanel  pb={4}>
-
-<VStack alignItems="left" >
-
- <Link to="/" onClick={()=>onClose()} >
- <Flex alignItems="center" > 
-      <IconButton  color="red.500" 
-      icon= {<MdEditNotifications/>} bg="none" />
-       <Text>Products</Text>
-</Flex></Link> 
-<Divider />
-
-<Link to="/WhyHotjar" onClick={()=>onClose()} >
-<Flex alignItems="center" > 
-      <IconButton  color="red.500" 
-      icon= {<MdFeed/>} bg="none" />
-        <Text>WhyHotJar</Text>
-</Flex></Link> 
-<Divider />
-<Link to="/pricing" onClick={()=>onClose()} >
-<Flex alignItems="center" > 
-      <IconButton color="red.500" 
-      icon= {<MdDynamicFeed/>} bg="none" />
-       <Text>Pricing</Text>
-</Flex></Link> 
-<Divider />
-<Link to="/about" onClick={()=>onClose()} >
-<Flex alignItems="center" > 
-      <IconButton color="red.500" 
-      icon= {<MdEco/>} bg="none" />
-     <Text>About</Text>
-</Flex></Link>
-<Divider />
-
-
-</VStack>
-
-</AccordionPanel>
-
-
-
-            
-            
-               </AccordionItem>
-
-
-             </Accordion>
+ 
+               }
+         <br />
             <Divider/>
+        <br />
+           
+           <VStack   >
+
+            
+           {
+                Links.map((el)=>(
+
+                  <VStack     w={"100%"} 
+                  >
+
+                 
+                    <NavLink
+                    key={el.path}
+                    to={el.path}
+                    w={"100%"}
+                    onClick={()=>onClose()}
+                    className={({ isActive }) => (isActive ? "SmallactiveS" : "SmalldefaultS")
+                  } end
+                  >
+                        <Text
+                        w={"100%"}  fontSize="20px" fontWeight={"semibold"}   p="10px 10px">{el.name}</Text>
+                       
+                    </NavLink>
+                    <Divider/>
+                    </VStack>
+                ))
+            }
+               
+
+
+
+           </VStack>
+
+
+
 
             {
               !isAuth ? <HStack marginTop="20px" justifyContent="space-around" >
