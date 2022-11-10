@@ -53,11 +53,13 @@ const Navbar = () => {
          w="100%" h="64px" 
          >
  
-       <HStack  w="full" maxW="1400px" p={{ base: 'none', md: '0.6rem' }} spacing={8}>
+       <HStack  w="full" maxW="1400px" 
+       p={{ base: 'none', md: '0.6rem' }} spacing={8}>
          
           <HStack  >
             <Link to="/">
-            <Image w={{ base: '150px', md: '200px' }}
+            <Image
+             w={{ base: '150px', md: '200px' }}
             minW="150px"
             dropShadow="2xl"
             style={{ position: "relative", left: "0px",  
@@ -159,7 +161,8 @@ const Navbar = () => {
            }
 
 
-          <HStack display={{ base: 'block', md: 'block', lg: 'none' }}  >
+          <HStack
+           display={{ base: 'block', md: 'block', lg: 'none' }}  >
 
             <IconButton
             onClick={()=>onOpen()}
@@ -178,7 +181,8 @@ const Navbar = () => {
        </HStack>
 
        
-        <Drawer  placement='right' onClose={onClose} isOpen={isOpen} size="full">
+        <Drawer  placement='right'
+         onClose={onClose} isOpen={isOpen} size="full">
         
            <DrawerOverlay />
 
