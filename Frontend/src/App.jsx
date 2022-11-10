@@ -1,5 +1,6 @@
 
 import './App.css';
+import Footer from './pages/Sufiyan/Footer';
 import Navbar from './pages/Sufiyan/Navbar';
 import AllRoutes from './routes/AllRoutes';
 
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
        <Navbar / > 
        <AllRoutes/>
+       <Footer/>
     </div>
   );
 }

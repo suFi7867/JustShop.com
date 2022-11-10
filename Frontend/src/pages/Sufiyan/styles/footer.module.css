@@ -1,0 +1,157 @@
+#fooTerdivs {
+    line-height: 20px;
+    padding: 5% 0;
+    width: 100%;
+    height: auto;
+    background-color: #032448;
+    color: #b2dbe8;
+  
+  }
+  
+  #fooTer {
+    width: 75%;
+    margin: auto;
+  }
+  
+  .footerGrid a {
+    color: #b2dbe8;
+    text-decoration: none;
+  }
+  #fooTer > h1 {
+    color: #fdd835;
+  }
+  
+  .footerGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    margin: auto;
+  }
+  
+  /* .footerGrid>div {
+      
+  } */
+  
+  .footerGrid h4 {
+    color: #fdd835;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .footerGrid h3 > a {
+    margin-bottom: 20px;
+    color: white;
+  }
+  .footerGrid h4 + input {
+    border: none;
+    border-bottom: 1px solid #fdd835;
+    background-color: #181818;
+    height: 30px;
+  }
+  .inpbtnFlex {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .inpbtnFlex > input {
+    margin-left: -80px;
+    border-bottom: 1px solid #82beff;
+    background-color: #181818;
+    width: 150px;
+  }
+  .bTTn {
+    background-color: #82beff;
+    border: none;
+    color: #181818;
+    padding: 0.5rem 1rem;
+  }
+  
+  #footerGrid p,
+  .footerGrid p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+ 
+    margin: 2px;
+  }
+  
+  .footerEnd h4 {
+    color: #b2e7ed;
+  }
+  
+  #imgDivmain {
+    display: flex;
+    width: 80%;
+  }
+  
+  #imgDivmain > div {
+    flex: 1;
+    height: 30px;
+    margin: 2px;
+  }
+  
+  #imgDivmain > div img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media screen and (min-width: 0px) and (max-width: 375px) {
+    .footerGrid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+      margin: auto;
+    }
+  
+    .footerEnd {
+      display: flex;
+    }
+  
+    .footerEnd h4 {
+      margin: 10px;
+    }
+  }
+  
+  @media screen and (min-width: 375px) and (max-width: 765px) {
+    .footerGrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      margin: auto;
+    }
+  }
+  .H1 {
+    margin-top: 20px;
+    margin-bottom: 2%;
+    font-size: 26px;
+  }
+  div > p {
+    line-height: 18px;
+    font-size: 14px;
+   
+  }
+  #fooTer h4 {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 400;
+   
+  }
+  #fooTer hr {
+    /* border: 1px solid red;
+      background-color: blue; */
+    margin: 4% 0;
+  }
+  .footerEnd > h4 {
+    line-height: 20px;
+    /* border:2px solid #ffffff; */
+    padding: 5px 0;
+  }
+  .footerEnd > h4 > a {
+    color: #b2dbe8;
+    font-weight: bold;
+    line-height: 18px;
+    margin: 5px;
+  }
+  

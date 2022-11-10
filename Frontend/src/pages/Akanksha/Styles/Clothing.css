@@ -1,0 +1,47 @@
+
+.menSec{
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #F3F3F3; */
+    padding:10px;
+}
+
+.menBox{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+
+.menImage{
+    width:200px;
+    transition:1s all ease-in-out;
+}
+
+.menImage:hover{
+    transform:scale(1.1)
+}
+
+/* .carouselBox{
+    border: 1px solid #14244B;
+} */
+
+.sellerBox{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    gap:1rem;
+    padding:5px;
+}
+
+.imageBox{
+    height:80%;
+    width:90%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

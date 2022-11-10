@@ -52,6 +52,24 @@
 
 }
 
+.SmallactiveS {
+  text-decoration: none;
+  background-color: #0d6dd7;
+  border-radius: 10px 0px;
+  color: white;
+  border-bottom: 4px solid #ffca3a;
+}
+
+
+
+.SmalldefaultS {
+  text-decoration: none;
+
+
+}
+
+
+
 .NestedactiveS {
   text-decoration: none;
   border-bottom: 4px solid orange;
