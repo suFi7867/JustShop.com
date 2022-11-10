@@ -14,9 +14,15 @@ const navigateToSingleProductPage=(id)=>{
 let discount=Math.floor(((Number(strikePrice)-Number(price))/strikePrice)*100);
 
     return(
+
+<Stack  
+border={"2.6px solid whitesmoke"} style={{ display:"flex", flexDirection:"column", justifyContent:"space-between"}} >
+      
+
         
 <Stack  border={"2.6px solid whitesmoke"} style={{ display:"flex", flexDirection:"column", justifyContent:"space-between"}} >
   <Box  bgColor={"#cf2e2e"} width={"48px"}> <Text color={"white"} textAlign={"center"}  align={"left"}>{discount}%</Text></Box>
+
       <Image 
       margin={"auto"}
        src={image} 

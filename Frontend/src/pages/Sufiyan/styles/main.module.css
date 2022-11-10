@@ -1,0 +1,451 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+  #iTems {
+    border-radius: 50%;
+    margin-left: -10px;
+    color: brown;
+    background-color: yellowgreen;
+  }
+  .upperNav {
+    width: 82%;
+    margin: auto;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+  }
+  .bsIcon {
+    font-size: 11px;
+    color: #494949;
+    margin-right: 4px;
+  }
+  .upperDiv {
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+  }
+  .upperNav > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .leftupperNav {
+    width: 30%;
+  }
+  .RightupperNav {
+    width: 15%;
+  }
+  .linksNav {
+    font-size: 11px;
+    text-decoration: none;
+    color: #494949;
+  }
+  #navBar {
+    /* position: -webkit-sticky; */
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  
+    background-color: white;
+  }
+  #fixedNav {
+    background-color: white;
+    margin-top: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    font-family: montserrat, sans-serif;
+    z-index: 10000;
+   
+  }
+  .dropH2 {
+    margin-bottom: 10px;
+  }
+  #dataBar {
+    /* margin-top: 60px;  */
+    /* position: fixed; */
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #dataBar > li {
+    list-style: none;
+    font-size: 16px;
+    margin: 10px 30px;
+  }
+  
+  /* .bTn :hover{
+      font-weight: bold;
+      border-bottom: 4px solid yellowgreen;
+  } */
+  /* #nav_bar_top {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background-color: rgb(238, 238, 238);
+      justify-content: space-around;
+    }
+    #nav_bar_top_left > li {
+      display: flex;
+      list-style-type: none;
+      margin: 4px 20px;
+      align-items: center;
+    }
+    #nav_bar_top_left > div {
+      margin-left: 50px;
+    }
+    #nav_bar_top_left > li > a {
+      text-decoration: none;
+      color: #333;
+    }
+    #nav_bar_top_left {
+      display: flex;
+    } */
+  
+  #menuNav {
+    display: flex;
+    align-items: center;
+  }
+  #menuNav > div {
+    margin-right: 50px;
+  }
+  #menuNav > li {
+    list-style-type: none;
+    margin: 15px 20px;
+  }
+  #menuNav > li > a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: montserrat, sans-serif;
+    letter-spacing: 1px;
+  }
+  #menuNav > li > a > img {
+    width: 150px;
+  }
+  #searchBars {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #searchBars > li {
+    list-style-type: none;
+    color: #333;
+    margin: 10px;
+    align-items: center;
+  }
+  #searchBars > li > a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+  }
+  .iconInput {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgb(238, 238, 238);
+    padding-left: 10px;
+    border-radius: 5px;
+  }
+  .iconInput > input {
+    width: 320px;
+  
+    background-color: rgb(238, 238, 238);
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 10px;
+    outline: none;
+    border: none;
+  }
+
+
+  .mainLoadCSS{
+    width: 1200px ;
+    height: 800px;
+  }
+
+  
+  .loadingCSS {
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    top: 12%;
+    left: 45%;
+    text-align: center;
+    width: 250px;
+    border: 1px solid  #fdd835;
+  }
+
+
+  #WrapNav{
+    padding: 0px 50px;
+    width: 100%;
+    
+  }
+
+  #landingPageTOP{
+    margin-top: 150px;
+  }
+
+    /* meidum screens */
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+      .iconInput > input {
+        
+        width: auto;
+          background-color: rgb(238, 238, 238);
+          border-radius: 5px;
+          font-size: 12px;
+          padding: 10px;
+          outline: none;
+          border: none;
+        }
+       
+        #menuNav > li {
+          list-style-type: none;
+          margin: 15px 10px;
+        }
+        
+        #menuNav > li > a > img {
+          width: 100%
+        }
+         
+        
+       .mainLoadCSS{
+         width: fit-content ;
+         height: 600px;
+       }
+  
+       .loadingCSS {
+        background-color: white;
+        border-radius: 25px;
+        position: absolute;
+        top: 15%;
+        left: 35%;
+        text-align: center;
+        width: 150px;
+        border: 1px solid  #fdd835;
+      }
+      
+      .loadingCSS h1{
+        font-size: 0.5rem;
+      }
+      #WrapNav{
+        padding: 0px 0px;
+        width: 100%;
+      }
+
+      #landingPageTOP{
+        margin-top: 250px;
+      }
+    
+      
+    }
+ 
+
+
+         /* small screens */
+    @media all and (min-width: 320px) and (max-width: 767px) {
+     .iconInput > input {
+        
+      width: auto;
+        background-color: rgb(238, 238, 238);
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 10px;
+        outline: none;
+        border: none;
+      }
+     
+      #menuNav > li {
+        list-style-type: none;
+        margin: 15px 10px;
+      }
+      
+      #menuNav > li > a > img {
+        width: 100%
+      }
+       
+      
+     .mainLoadCSS{
+       width: fit-content ;
+       height: 600px;
+     }
+
+     .loadingCSS {
+      background-color: white;
+      border-radius: 25px;
+      position: absolute;
+      top: 15%;
+      left: 35%;
+      text-align: center;
+      width: 150px;
+      border: 1px solid  #fdd835;
+    }
+    
+    .loadingCSS h1{
+      font-size: 0.5rem;
+    }
+
+    #WrapNav{
+      padding: 0px 0px;
+      width: 100%;
+    }
+
+    
+    #landingPageTOP{
+      margin-top: 250px;
+    }
+
+    }
+
+
+
+  #searchBars > li > input:hover {
+    /* background-color: transparent; */
+    outline: none;
+    border: 0.5px solid #333;
+  }
+  
+  #searchBars > li > li {
+    font-size: 18px;
+  }
+  .lInk {
+    text-decoration: none;
+    color: #333;
+    padding: 2px;
+  }
+  
+  hr {
+    border: 1px solid rgb(231, 208, 208);
+  }
+  
+  #menuNav > li > a:hover {
+    border-bottom: 4px solid rgb(253, 216, 53);
+  
+    padding-bottom: 18px;
+    visibility: visible;
+  }
+  
+  .dropDown {
+    display: flex;
+    list-style-type: none;
+    position: absolute;
+    background-color: #ffffff;
+    text-transform: capitalize;
+    border: 1px solid wheat;
+    margin: auto;
+    margin-top: 21px;
+    width: 80%;
+    margin-left: -200px;
+    /* margin-right: 30%; */
+    visibility: hidden;
+    border: 1px solid #cccccc;
+    z-index: 100000;
+  }
+  .hrLine {
+    border: none;
+    height: 1px;
+    background: #cccccc;
+    margin-top: 4px;
+  }
+  .dropDown > ul {
+    list-style-type: none;
+    padding: 10px;
+    margin-left: 10px;
+  }
+  .dropDown > ul > li > a {
+    text-decoration: none;
+    line-height: 30px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #7f7f7f;
+  }
+  .dropDown > ul > li > h5 {
+    text-decoration: none;
+    line-height: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #494949;
+  }
+  #menuNav > li:hover .dropDown {
+    visibility: visible;
+  }
+  #mainMenu1 {
+    margin-right: 30%;
+  }
+  
+  #searchBarsData {
+    width: 340px;
+    position: fixed;
+    background-color: white;
+  }
+  
+  .typesofMenu > li > a > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .typesofMenu > li > a {
+    display: flex;
+    padding: 5px;
+  }
+  .typesofMenu > li > a > span {
+    margin-left: 20px;
+  }
+
+  #items {
+    background-color: gold;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 100;
+  }
+  /* #cart-icon {
+      height: 35px;
+      width: 35px;
+    } */
+  
+  #menuNav > li:hover .dropDown {
+    visibility: visible;
+  }
+  
+.upHead{
+    width: 1200px;
+    background-color: #eeeeee;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    font-size: 12px;
+
+}
+
+.upHead > div{
+  display: flex;
+}
+
+.upHead > div > div{
+   padding: 5px 10px;
+  }
+
+  .LogoutHOver{
+    background-color: #fdd835;
+    border-radius: 5px;
+    padding: 2px 10px;
+  }
+  
+  .LogoutHOver:hover{
+    background-color: yellowgreen;
+  }

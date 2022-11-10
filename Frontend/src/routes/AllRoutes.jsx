@@ -11,6 +11,7 @@ import Register from '../pages/Shubham/Register'
 import Payment from '../pages/Sufiyan/Payment'
 import PurchaseSucessfull from '../pages/Sufiyan/PurchaseSucessfull'
 import SingleProduct from '../pages/Sufiyan/SingleProduct'
+import Team from '../pages/Sufiyan/Team'
 
 
 
@@ -43,6 +44,10 @@ const AllRoutes = () => {
             <Route path='/login' element={<Login />} />
 
             <Route path='/register' element={<Register/>} />
+
+            <Route path='/about' element={<Team/>} />
+            
+
 
             {/* NAVBAR IS DIFFERENT */}
             <Route path='/cart' 
