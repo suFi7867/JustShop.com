@@ -6,23 +6,16 @@ import ad from "../Assets/ad.gif"
 import "../Styles/Banner.css";
 import {Box } from "@chakra-ui/react";
 
-
-const fadeImages = [
-    {
-    url: banner2,
-    }
-  ];
-
 const Banner = () => {
   return (
-    <Box className="box1" >
-        <div className="banner">
-            <img src={banner2} alt="banner" width="700px" />
-        </div>
+    <Box className="box1">
+        <Box className="banner" display={{base:"none", md:"block", sm:"block"}}>
+            <img src={banner2} alt="banner" />
+        </Box>
 
-        <div className="ad">
-            <img src={ad} alt="ad" width="365px" />
-        </div>
+        <Box className="ad">
+            <img src={ad} alt="ad" />
+        </Box>
     </Box>
   )
 }
