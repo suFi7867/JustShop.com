@@ -1,73 +1,80 @@
 import React from "react";
 import styles from "./styles/footer.module.css";
 import { NavLink } from "react-router-dom";
-import { VStack } from "@chakra-ui/react";
+import { Divider, HStack, Image, Text, VStack } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <VStack position={"relative"} bottom=""  id={styles.fooTerdivs}>
-      <div id={styles.fooTer}>
-        <h1 className={styles.H1}>Bewakoof</h1>
-        <div className={styles.footerGrid}>
-          <div>
-            <h4>CUSTOMERS SERVICE</h4>
-            <p>
-              <a href="/">Contact us</a>
-            </p>
-            <p>
-              <a href="/">Track Order</a>
-            </p>
-            <p>
-              <a href="/">Return Order</a>
-            </p>
-            <p>
-              <a href="/">Cancel Order</a>
-            </p>
-          </div>
-          <div>
-            <h4>COMPANY</h4>
-            <p>
-              <a href="/">About us</a>
-            </p>
-            <p>
-              <a href="/">We're Hiring</a>
-            </p>
-            <p>
-              <a href="/">Terms & Conditions</a>
-            </p>
-            <p>
-              <a href="/">Privacy Policy</a>
-            </p>
-            <p>
-              <a href="/">Blog</a>
-            </p>
-          </div>
-          <div>
-            <h4>CONNECT WITH US</h4>
-            <p>
-              <a href="/">4.7M People Like this</a>
-            </p>
-            <p>
-              <a href="/">1M Followers</a>
-            </p>
-          </div>
-          <div>
-            <h4>KEEP UP TO DATE</h4>
+    <VStack position={"relative"} bottom="0" w={"1400px"} id={styles.fooTerdivs}>
+
+ 
+      <VStack id={styles.fooTer} w="full"  >
+      
+        <HStack alignItems="flex-start" w="full" justifyContent="space-around" >
+          <VStack  alignItems="flex-start" >
+            <Text fontSize="md" color="#82beff">CUSTOMERS SERVICE</Text>
+            
+              <Text color="whiteAlpha.900">Contact us</Text>
+          
+          
+              <Text color="whiteAlpha.900">Track Order</Text>
+          
+          
+              <Text color="whiteAlpha.900">Return Order</Text>
+          
+        
+              <Text color="whiteAlpha.900">Cancel Order</Text>
+       
+          </VStack>
+          <VStack  alignItems="flex-start" >
+            <Text fontSize="md" color="#82beff">COMPANY</Text>
+         
+              <Text color="whiteAlpha.900">About us</Text>
+     
+        
+              <Text color="whiteAlpha.900">We're Hiring</Text>
+         
+         
+              <Text color="whiteAlpha.900">Terms & Conditions</Text>
+           
+       
+              <Text color="whiteAlpha.900">Privacy Policy</Text>
+          
+              <Text color="whiteAlpha.900">Blog</Text>
+  
+          </VStack>
+          <VStack  alignItems="flex-start" >
+            <Text fontSize="md" color="#82beff">CONNECT WITH US</Text>
+          
+              <Text color="whiteAlpha.900">4.7M People Like this</Text>
+        
+      
+              <Text color="whiteAlpha.900">1M Followers</Text>
+       
+          </VStack>
+          <VStack  alignItems="flex-start" >
+            <Text fontSize="md" color="#82beff">KEEP UP TO DATE</Text>
             <div className={styles.inpbtnFlex}>
               <input placeholder="Enter Email id" />
               <button className={styles.bTTn}>Subscribe</button>
             </div>
-          </div>
-          <div>
-            <p>
-              <a href="/">15 Days return policy</a>
-            </p>
-            <p>
-              <a href="/">Cash on delivery*</a>
-            </p>
-          </div>
-          <div>
-            <h4>DOWNLOAD THE APP</h4>
+          </VStack>
+        </HStack>
+
+        <Divider />
+
+        <HStack gap={50}  alignItems="flex-start">
+        <Image w={"150px"} src="https://i.ibb.co/37bRHfc/PROJECT-LOGO-png.png" />
+        <VStack>
+            <Text color="#82beff" fontSize="md">
+           15 Days return policy
+            </Text>
+            <Text color="#82beff" fontSize="md">
+            Cash on delivery*
+            </Text>
+          </VStack>
+          <VStack>
+            <Text color="#82beff" fontSize="md">DOWNLOAD THE APP</Text>
             <div id={styles.imgDivmain}>
               {/* //overflow={"hidden"} w="95%"  m="auto" mt={{base:"70px",lg:"190px"}} h={{base:"350px",lg:"auto"}} */}
               <div>
@@ -95,20 +102,21 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-          </div>
-          <div>
-            <h4>100% SECURE PAYMENT</h4>
+          </VStack>
+          <VStack>
+            <Text color="#82beff" fontSize="md">100% SECURE PAYMENT</Text>
             <div>
               <img
                 src="https://images.bewakoof.com/web/secure-payments-image.png"
                 alt=""
               />
             </div>
-          </div>
-        </div>
+          </VStack>
+        </HStack>
 
+ 
       
-      </div>
+      </VStack>
     </VStack>
   );
 };

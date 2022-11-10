@@ -3,7 +3,7 @@
     padding: 5% 0;
     width: 100%;
     height: auto;
-    background-color: #181818;
+    background-color: #032448;
     color: #b2dbe8;
   
   }
@@ -56,12 +56,12 @@
   }
   .inpbtnFlex > input {
     margin-left: -80px;
-    border-bottom: 1px solid #fdd835;
+    border-bottom: 1px solid #82beff;
     background-color: #181818;
     width: 150px;
   }
   .bTTn {
-    background-color: #fdd835;
+    background-color: #82beff;
     border: none;
     color: #181818;
     padding: 0.5rem 1rem;
