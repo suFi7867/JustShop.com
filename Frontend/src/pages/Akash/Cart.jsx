@@ -61,14 +61,12 @@ const Cart = () => (
         </Stack>
       </Stack>
 
-      <Flex direction="column" align="center" flex="1">
-        <CartOrderSummary />
-        <HStack mt="6" fontWeight="semibold">
-          <p>or</p>
-          <Link color={mode('blue.500', 'blue.200')}>Continue shopping</Link>
-        </HStack>
-      </Flex>
-    </Stack>
-  </Box>
-)
-export default Cart;
+const Cart = () => {
+  return (
+    <div>
+      <h1>Akash</h1>
+    </div>
+  )
+}
+
+export default Cart
