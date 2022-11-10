@@ -1,0 +1,35 @@
+
+.brandBox{
+    width:80%;
+    margin:auto;
+    margin-top: 4rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #14244B;
+    flex-direction: column;
+    gap:1.5rem;
+    padding:10px;
+}
+
+.brandImg{
+    /* border: 8px solid black ; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:15px;
+    background-color: #F3F3F3;
+}
+
+.timerBox{
+    border: 5px solid #14244B ;
+    height:150px;
+    width:150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:15px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}

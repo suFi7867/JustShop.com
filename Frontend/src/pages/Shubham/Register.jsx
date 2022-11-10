@@ -17,49 +17,43 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
-import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Navigate } from "react-router-dom";
+import { registerUser } from "../../redux/register/register.actions";
+import Recaptcha from "./components/Recaptcha";
 // import Loader from "../components/SmallComponents/Loader";
-// import { AuthContext } from "../Context/AuthContext";
 
 const Register = () => {
-  // const { LoginUser } = useContext(AuthContext);
+  const { isAuth } = useSelector((store) => store.auth);
+  const { isRegistered, loading, error, successMessage, errorMessage } =
+    useSelector((store) => store.register);
+  const dispatch = useDispatch();
+  const [registerCreds, setRegisterCreds] = useState({});
 
-  const [name, SetName] = useState("");
-
-  const [Loading, setLoading] = useState(false);
-  // const navigatekaro = useNavigate();
-
-  const toast = useToast();
-
-  const handleClick = () => {
-    setLoading(true);
-
-    setTimeout(() => {
-      prompt("ENTER OTP");
-
-      // LoginUser(name);
-
-      // navigatekaro("/");
-    }, 2000);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setRegisterCreds({
+      ...registerCreds,
+      [name]: value,
+    });
   };
 
-  ////////////////////////LOADER //////////////////////////////
-  // is Loading   //
-  const [isLoading, setIsLoading] = useState(true);
+  const handleClick = () => {
+    dispatch(registerUser(registerCreds));
+    if (isRegistered) {
+      alert(successMessage);
+    }
+  };
 
-  setTimeout(() => {
-    setIsLoading(false);
-  }, 1500);
-
-  // console.log(data)
-
-  // if (isLoading) {
-  //   return <Loader />;
-  // }
-
-  ////////////////////////LOADER //////////////////////////////
-
+  if (isAuth) {
+    return <Navigate to="/" />;
+  }
+  if (loading) {
+    return <div>Loading...</div>;
+  } else if (error) {
+    return <div>{errorMessage}</div>;
+  }
   return (
     <HStack w="full">
       <VStack
@@ -78,8 +72,8 @@ const Register = () => {
           <FormControl>
             <FormLabel>Name</FormLabel>
             <Input
-              onChange={(e) => SetName(e.target.value)}
-              value={name}
+              onChange={handleChange}
+              name="name"
               type="text"
               placeholder="Enter Your Name..."
             />
@@ -87,17 +81,17 @@ const Register = () => {
           <FormControl>
             <FormLabel>Surname</FormLabel>
             <Input
-              onChange={(e) => SetName(e.target.value)}
-              value={name}
-              type="email"
+              onChange={handleChange}
+              name="surname"
+              type="text"
               placeholder="Enter Your Surname..."
             />
           </FormControl>
           <FormControl>
             <FormLabel>Email</FormLabel>
             <Input
-              onChange={(e) => SetName(e.target.value)}
-              value={name}
+              onChange={handleChange}
+              name="email"
               type="email"
               placeholder="Enter Your Email..."
             />
@@ -105,7 +99,12 @@ const Register = () => {
 
           <FormControl>
             <FormLabel>Password</FormLabel>
-            <Input type="password" placeholder="Enter Your Password..." />
+            <Input
+              onChange={handleChange}
+              name="password"
+              type="password"
+              placeholder="Enter Your Password..."
+            />
           </FormControl>
           <FormControl>
             <FormLabel> Confirm Password</FormLabel>
@@ -113,14 +112,15 @@ const Register = () => {
           </FormControl>
         </Stack>
         <Stack textAlign="left" spacing={5} w="full">
+          <Recaptcha />
           <Button
             onClick={handleClick}
             w="full"
             colorScheme="facebook"
             variant="solid"
           >
-            {!Loading && "Create your new account"}
-            {Loading && (
+            {"Create your new account"}
+            {/* {Loading && (
               <Spinner
                 thickness="4px"
                 speed="0.55s"
@@ -128,7 +128,7 @@ const Register = () => {
                 color="blue.500"
                 size="lg"
               />
-            )}
+            )} */}
           </Button>
         </Stack>
       </VStack>
@@ -140,6 +140,8 @@ const Register = () => {
         height="100vh"
         bg="#ebeef9"
         display={{ base: "none", md: "block" }}
+        bgImage="./Register.gif"
+        bgSize="cover"
       >
         <Text marginTop={50} maxWidth={{ base: "100%", md: "60%", lg: "60%" }}>
           {/* HOTJAR GUIDES */}
@@ -149,23 +151,20 @@ const Register = () => {
           width="500px"
           src="https://insights.hotjar.com/static/37d85d9a61db85c93d7f.png"
         /> */}
-        <Text width="full" fontSize="18px" fontWeight="semibold">
-          Guides to learn more about Hotjar
+        <Text color="black" width="full" fontSize="18px" fontWeight="semibold">
+          We are here to look upon your every need...
         </Text>
         <Text
           width="full"
           fontSize="15px"
           fontWeight="thin"
           maxWidth={{ base: "100%", md: "60%", lg: "60%" }}
+          color="black"
         >
-          Check out our guides to better understand user behavior, make the
-          right changes, improve UX, and increase conversions on your website
-          and product.
+          The One-stop Shopping Destination. E-commerce is revolutionizing the
+          way we all shop in India. Why do you want to hop from one store to
+          another .
         </Text>
-
-        <Button colorScheme="messenger" variant="outline">
-          Explore Guides
-        </Button>
       </VStack>
     </HStack>
   );
