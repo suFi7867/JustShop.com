@@ -9,7 +9,7 @@ const navigate=useNavigate();
 
 // navigating to singleProduct page
 const navigateToSingleProductPage=(id)=>{
-    navigate(`/products/:${id}`)
+    navigate(`/products/${id}`)
 }
 
 
