@@ -7,7 +7,7 @@ const Electronic = () => {
 
 
   return (
-    <Stack style={{marginTop: "80px"}} > 
+    <Stack style={{marginTop: "20px"}} > 
               
 <Stack justify='center' style={{ margin:"auto", marginTop:"20px"}}  >
    <VStack spacing={5}>
@@ -31,16 +31,9 @@ const Electronic = () => {
 
 </HStack>
 
-
-
-
 </Stack>
 
-
-
-
 </Stack>
-
 
   )
 }
