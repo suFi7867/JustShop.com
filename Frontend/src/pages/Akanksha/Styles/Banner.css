@@ -1,0 +1,13 @@
+
+
+.box1{
+    width:80%;
+    display:flex;
+    gap:2rem;
+    border:1px solid black;
+    margin:auto;
+}
+
+/* .banner{
+    border:1px solid red;
+} */
