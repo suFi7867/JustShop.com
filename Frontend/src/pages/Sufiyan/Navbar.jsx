@@ -4,7 +4,7 @@ import { MdDynamicFeed, MdEco, MdEditNotifications, MdFeed, MdOutlineDarkMode } 
 import { BsLightbulb } from 'react-icons/bs';
 import { AiOutlineMenu } from 'react-icons/ai';
 //AiOutlineMenu
-
+import { BiSearch } from 'react-icons/bi';
 import { Link, NavLink } from 'react-router-dom';
 
 import { ImAndroid } from 'react-icons/im';
@@ -37,6 +37,8 @@ const Navbar = () => {
 
     const { colorMode, toggleColorMode } = useColorMode()
     const { isOpen, onOpen, onClose } = useDisclosure()
+
+    const [ OpenSearch ,  SetOpenSearch] = useState("none")
 
     const LogOutUser = ()=>{
 
@@ -74,7 +76,8 @@ const Navbar = () => {
 
       
 
-           <HStack  w={{base:"full", md:"fit-content"}} p={2}   justifyContent="space-around"   >
+           <HStack  w={{base:"full", md:"fit-content"}} 
+           p={2}   justifyContent="space-around"   >
  
              <Box  display={{base:"none", md:"block"}} >
             
@@ -118,7 +121,7 @@ const Navbar = () => {
         borderRadius={50}
         variant='link'
         onClick={toggleColorMode}
-              icon={ colorMode === "light" ? <MdOutlineDarkMode /> : <BsLightbulb/>  } />
+        icon={ colorMode === "light" ? <MdOutlineDarkMode /> : <BsLightbulb/>  } />
 
               </HStack>
        
@@ -162,7 +165,18 @@ const Navbar = () => {
 
 
           <HStack
-           display={{ base: 'block', md: 'block', lg: 'none' }}  >
+           display={{ base: '-webkit-inline-flex', md: 'none', lg: 'none' }}  >
+        
+          <IconButton
+          variant="solid"
+          
+          colorScheme="messenger"
+          fontSize="x-large"
+            onClick={()=>SetOpenSearch( OpenSearch=="none" ? "block" : "none" )}
+            icon={<BiSearch />} >
+
+            </IconButton>
+
 
             <IconButton
             onClick={()=>onOpen()}
@@ -575,26 +589,12 @@ display={{ base: 'none', md: 'none', lg: 'block' }} >
 
     </HStack>
 
-    <Box display={{base:"block", md:"none"}} >
-           { /*<div  
-            className={styles.iconInput}>
-              <IoSearchOutline />
-              <Input
-                type="text"
-                id={styles.inpSrch}
-                width="auto"
-                placeholder="search by product,category or collection"
-              >
-                
-              </Input>
-           </div> */}
- 
-           <SearchBar2/>
-
-            
-          </Box>
+    <Box  display={{base: `${OpenSearch}`, md:"none"}} >
+           <SearchBar2 OpenSearch={OpenSearch} SetOpenSearch={SetOpenSearch} />   
+    </Box>
     </Box>
   )
 }
-
+// OpenSearch
+// SetOpenSearch
 export default Navbar

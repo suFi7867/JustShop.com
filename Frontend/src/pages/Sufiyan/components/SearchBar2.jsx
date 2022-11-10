@@ -303,13 +303,14 @@ thirdImages:[]
 
 ]
 
-const SearchBar2 = () => {
+const SearchBar2 = ( OpenSearch , SetOpenSearch ) => {
 
     const navigate = useNavigate()
 
     const formatResult = (item) => {
         return (
-          <HStack>
+          <HStack   
+          onClick={()=>SetOpenSearch( OpenSearch=="none" ? "block" : "none" )}  >
           
             <Image boxSize={50} src={item.defaultImage} />
             <Text>{item.name}</Text>

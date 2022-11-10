@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles/footer.module.css";
 import { NavLink } from "react-router-dom";
-import { Divider, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Divider, HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
@@ -10,7 +10,9 @@ const Footer = () => {
  
       <VStack id={styles.fooTer} w="full"  >
       
-        <HStack alignItems="flex-start" w="full" justifyContent="space-around" >
+        <Stack direction={{base:"column", md:"row" }}
+        gap={{base:"20px", md:"none" }}
+         alignItems="flex-start" w="full" justifyContent="space-around" >
           <VStack  alignItems="flex-start" >
             <Text fontSize="md" color="#82beff">CUSTOMERS SERVICE</Text>
             
@@ -52,20 +54,27 @@ const Footer = () => {
               <Text color="whiteAlpha.900">1M Followers</Text>
        
           </VStack>
-          <VStack  alignItems="flex-start" >
+          <VStack display={{base:"none", md:"block"}}  alignItems="flex-start" >
             <Text fontSize="md" color="#82beff">KEEP UP TO DATE</Text>
             <div className={styles.inpbtnFlex}>
               <input placeholder="Enter Email id" />
               <button className={styles.bTTn}>Subscribe</button>
             </div>
           </VStack>
-        </HStack>
+        </Stack>
 
         <Divider />
 
-        <HStack gap={50}  alignItems="flex-start">
-        <Image w={"150px"} src="https://i.ibb.co/37bRHfc/PROJECT-LOGO-png.png" />
-        <VStack>
+        <Stack  gap={{base:"20px", md:"none" }}
+         
+           direction={{base:"column", md:"row" }}
+          
+          >
+            <VStack textAlign="center" >
+            <Image   w={"150px"} src="https://i.ibb.co/37bRHfc/PROJECT-LOGO-png.png" />
+            </VStack>
+       
+        <VStack display={{base:"none", md:"block"}} >
             <Text color="#82beff" fontSize="md">
            15 Days return policy
             </Text>
@@ -73,7 +82,7 @@ const Footer = () => {
             Cash on delivery*
             </Text>
           </VStack>
-          <VStack>
+          <VStack >
             <Text color="#82beff" fontSize="md">DOWNLOAD THE APP</Text>
             <div id={styles.imgDivmain}>
               {/* //overflow={"hidden"} w="95%"  m="auto" mt={{base:"70px",lg:"190px"}} h={{base:"350px",lg:"auto"}} */}
@@ -112,7 +121,7 @@ const Footer = () => {
               />
             </div>
           </VStack>
-        </HStack>
+        </Stack>
 
  
       

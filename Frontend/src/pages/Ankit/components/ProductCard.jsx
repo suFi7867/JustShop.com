@@ -14,7 +14,8 @@ const navigateToSingleProductPage=(id)=>{
 
 
     return(
-<Stack  border={"2.6px solid whitesmoke"} style={{ display:"flex", flexDirection:"column", justifyContent:"space-between"}} >
+<Stack  
+border={"2.6px solid whitesmoke"} style={{ display:"flex", flexDirection:"column", justifyContent:"space-between"}} >
       
       <Image 
       margin={"auto"}
