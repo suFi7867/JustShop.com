@@ -6,7 +6,7 @@ import WomenSection from './Components/WomenSection';
 import ElectronicSection from './Components/ElectronicSection';
 import FlexItems from './Components/FlexItems'
 import Why from './Components/Why';
-
+import Banner from "./components/Banner"
 
 const LandingPage = () => {
   return (

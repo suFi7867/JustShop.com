@@ -18,54 +18,44 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
-import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, Navigate } from "react-router-dom";
+import { login } from "../../redux/auth/auth.actions";
+import { signInWithGoogle } from "./components/firbase";
 // import Loader from "../components/SmallComponents/Loader";
 
-// import { AuthContext } from "../Context/AuthContext";
-
 const Login = () => {
-  // const { LoginUser } = useContext(AuthContext);
+  const { isAuth, loading, error, errorMessage } = useSelector(
+    (store) => store.auth
+  );
+  const dispatch = useDispatch();
+  const [loginCreds, setLoginCreds] = useState({});
 
-  const [name, SetName] = useState("");
-
-  const [Loading, setLoading] = useState(false);
-  // const navigatekaro = useNavigate();
-
-  const toast = useToast();
-
-  const handleClick = () => {
-    setLoading(true);
-
-    setTimeout(() => {
-      prompt("ENTER OTP");
-
-      // LoginUser(name);
-
-      // navigatekaro("/");
-    }, 2000);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setLoginCreds({
+      ...loginCreds,
+      [name]: value,
+    });
   };
 
-  ////////////////////////LOADER //////////////////////////////
-  // is Loading   //
-  const [isLoading, setIsLoading] = useState(true);
+  const handleClick = () => {
+    dispatch(login(loginCreds));
+  };
 
-  setTimeout(() => {
-    setIsLoading(false);
-  }, 1500);
-
-  // console.log(data)
-
-  // if (isLoading) {
-  //   return <Loader />;
-  // }
-
-  ////////////////////////LOADER //////////////////////////////
-
+  if (isAuth) {
+    return <Navigate to="/" />;
+  }
+  if (loading) {
+    return <div>Loading...</div>;
+  } else if (error) {
+    return <div>{errorMessage}</div>;
+  }
   return (
     <HStack w="full">
       <VStack
-        spacing={5}
+        spacing={2}
         w="100vh"
         padding={{ base: "20px", md: "50px 100px" }}
         height="100vh"
@@ -75,25 +65,23 @@ const Login = () => {
             Sign In
           </Text>
 
-          <Text fontSize="sm">
-            <Highlight
-              query="Sign Up"
-              styles={{ color: "blue", textDecoration: "underline" }}
-            >
-              Need a Hotjar account? Sign Up
-            </Highlight>
-          </Text>
+          <Text fontSize="sm"></Text>
         </Stack>
 
-        <Stack spacing={5} w="full">
+        <Stack spacing={2} w="full">
           <ButtonGroup size="md" isAttached variant="outline">
             <IconButton aria-label="Add to friends">
               <Image
-                src="https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515358_10512.png"
+                src="https://cdn-icons-png.flaticon.com/512/2702/2702602.png"
                 w={25}
               />
             </IconButton>
-            <Button w="full" colorScheme="messenger" variant="solid">
+            <Button
+              w="full"
+              colorScheme="messenger"
+              variant="solid"
+              onClick={signInWithGoogle}
+            >
               Sign In With Google
             </Button>
           </ButtonGroup>
@@ -101,7 +89,7 @@ const Login = () => {
           <ButtonGroup size="md" isAttached variant="outline">
             <IconButton aria-label="Add to friends">
               <Image
-                src="https://media.istockphoto.com/vectors/lock-icon-vector-id936681148?k=20&m=936681148&s=612x612&w=0&h=j6fxNWrJ09iE7khUsDWetKn_PwWydgIS0yFJBEonGow="
+                src="https://cdn-icons-png.flaticon.com/512/3670/3670032.png"
                 w={25}
               />
             </IconButton>
@@ -111,7 +99,7 @@ const Login = () => {
           </ButtonGroup>
         </Stack>
 
-        <HStack spacing={5} w="full">
+        <HStack spacing={2} w="full">
           <Divider minW={1} />
           <Text w="full" fontSize="12px" color="gray.600">
             {" "}
@@ -120,12 +108,12 @@ const Login = () => {
           <Divider minW={1} />
         </HStack>
 
-        <Stack spacing={5} w="full">
+        <Stack spacing={2} w="full">
           <FormControl>
             <FormLabel>Email</FormLabel>
             <Input
-              onChange={(e) => SetName(e.target.value)}
-              value={name}
+              onChange={handleChange}
+              name="email"
               type="email"
               placeholder="Enter Your Email..."
             />
@@ -133,13 +121,18 @@ const Login = () => {
 
           <FormControl>
             <FormLabel>Password</FormLabel>
-            <Input type="password" placeholder="Enter Your Password..." />
+            <Input
+              type="password"
+              placeholder="Enter Your Password..."
+              name="password"
+              onChange={handleChange}
+            />
           </FormControl>
 
           <Checkbox defaultChecked>Keep Me Logged in</Checkbox>
         </Stack>
 
-        <Stack textAlign="left" spacing={5} w="full">
+        <Stack textAlign="left" spacing={2} w="full">
           <Text fontSize="15px" color="blue" as="u">
             Forgot Password
           </Text>
@@ -149,8 +142,8 @@ const Login = () => {
             colorScheme="facebook"
             variant="solid"
           >
-            {!Loading && "Sign In"}
-            {Loading && (
+            {"Sign In"}
+            {/* {(
               <Spinner
                 thickness="4px"
                 speed="0.55s"
@@ -158,7 +151,7 @@ const Login = () => {
                 color="blue.500"
                 size="lg"
               />
-            )}
+            )} */}
           </Button>
         </Stack>
       </VStack>
@@ -172,10 +165,11 @@ const Login = () => {
         display={{ base: "none", md: "block" }}
         bgImage="./SignIn.gif"
         bgSize="cover"
+        color="black"
       >
         <HStack>
           <Text
-            fontSize="2xl"
+            fontSize="3xl"
             fontWeight="bold"
             marginTop={50}
             maxWidth={{ base: "100%", md: "60%", lg: "60%" }}
@@ -184,11 +178,11 @@ const Login = () => {
             Welcome to
           </Text>
           <Image
-            width={{ base: "50%", md: "40%", lg: "20%" }}
+            width={{ base: "80%", md: "40%", lg: "20%" }}
             src="./Project Logo.png"
           />
         </HStack>
-        <Text width="full" fontSize="18px" fontWeight="semibold">
+        <Text width="full" fontSize="22px" fontWeight="semibold">
           Sign In to explore more about justShop
         </Text>
         <Text
@@ -197,13 +191,19 @@ const Login = () => {
           fontWeight="thin"
           maxWidth={{ base: "100%", md: "60%", lg: "60%" }}
         >
-          If you are the new visitor our website simply register yourself
+          If you are a new visitor to our website simply register yourself
           here...
         </Text>
 
-        <Button variant="outline">
-          Create new account
-        </Button>
+        <Link to="/register">
+          <Button
+            variant="outline"
+            colorScheme="messanger"
+            bgColor="facebook.200"
+          >
+            Create new account
+          </Button>
+        </Link>
       </VStack>
     </HStack>
   );
