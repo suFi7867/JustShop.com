@@ -33,7 +33,7 @@ const Links = [
 
 const Navbar = () => {
 
-  const isAuth = true
+  const isAuth = false
 
     const { colorMode, toggleColorMode } = useColorMode()
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -44,7 +44,7 @@ const Navbar = () => {
 // borderBottom="1px solid #eeee"
 
   return (
-    <div>
+    <Box   style={{position:"sticky", top:0, zIndex:"999" }} >
     <HStack 
    
       bg="#14244b"
@@ -89,12 +89,12 @@ const Navbar = () => {
             <Box display={{ base: 'none', md: 'none', lg: 'block' }} >
               <HStack>
               <NavLink to="/login" >
-                <Button fontWeight="lighter" colorScheme="messenger" variant='outline'>
+              <Button fontWeight="lighter" colorScheme="messenger" variant='solid'>
                    Sign in
                  </Button>
              </NavLink> 
    
-             <NavLink to="/login" >
+             <NavLink to="/register" >
               <Button fontWeight="lighter" colorScheme="messenger" variant='solid'>
                 Register
               </Button>
@@ -593,7 +593,7 @@ display={{ base: 'none', md: 'none', lg: 'block' }} >
 
             
           </Box>
-    </div>
+    </Box>
   )
 }
 
