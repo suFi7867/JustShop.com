@@ -14,6 +14,7 @@ import { cartData } from "./_data";
 
 const Cart = () => {
   return (
+  
     <Box
       maxW={{
         base: "3xl",
@@ -31,6 +32,7 @@ const Cart = () => {
         lg: "12",
       }}
     >
+       <h1>a</h1>
       <Stack
         direction={{
           base: "column",
