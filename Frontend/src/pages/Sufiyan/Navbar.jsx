@@ -40,7 +40,7 @@ const Links = [
 
 const Navbar = () => {
 
-  const isAuth = true
+  const isAuth = false
 
     const { colorMode, toggleColorMode } = useColorMode()
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -287,7 +287,7 @@ const Navbar = () => {
                 Log In
               </Button>
               </NavLink>
-              <NavLink to="/login">
+              <NavLink onClick={()=>onClose()} to="/register">
               <Button  colorScheme="messenger" variant='solid'>
                 Register
               </Button></NavLink>
