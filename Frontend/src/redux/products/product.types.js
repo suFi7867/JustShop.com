@@ -1,4 +1,3 @@
-
 // step 1
 
 export const GET_PRODUCTS_LOADING = "products/loading";

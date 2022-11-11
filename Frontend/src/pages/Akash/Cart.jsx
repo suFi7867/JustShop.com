@@ -8,11 +8,16 @@ import {
   useColorModeValue as mode,
 } from "@chakra-ui/react";
 import * as React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { CartItem } from "./CartItem";
 import { CartOrderSummary } from "./CartOrderSummary";
 import { cartData } from "./_data";
 
-const Cart = () => {
+const Cart = () => { 
+  const dispatch = useDispatch();
+
+  const { data } = useSelector((store) => store.cart);
+  const { token, isAuth } = useSelector((store) => store.auth);
   return (
   
     <Box
@@ -58,7 +63,7 @@ const Cart = () => {
           </Heading>
 
           <Stack spacing="6">
-            {cartData.map((item) => (
+            {data?.map((item) => (
               <CartItem key={item.id} {...item} />
             ))}
           </Stack>

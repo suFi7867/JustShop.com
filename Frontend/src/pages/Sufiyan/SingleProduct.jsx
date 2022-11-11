@@ -10,18 +10,21 @@ import { BiShoppingBag, BiPlus, BiMinus } from "react-icons/bi";
 import Loading from './components/Loding';
 
 import {CartDataToMatch} from "./data"
+import { useDispatch, useSelector } from 'react-redux';
+import { ACTION_ADD_ITEM_TO_CART } from '../../redux/cart/cart.actions';
 
 
 
 const SingleProduct = () => {
-
+  const {token} = useSelector((store)=>store.auth);
+  const dispatch = useDispatch();
  // is Loading   // 
  const [isLoading, setIsLoading] = useState(true);
 
  const [isButLoading, setIsButLoading] = useState(false);
 
  const [data, setData] = useState({})
-
+// console.log(data)
  const [DefaultImg, setImage] = useState()
 
  const [AllImages, setAllimages] = useState()
@@ -50,9 +53,9 @@ const SingleProduct = () => {
 
 
  const handleClick = () => {
-
+    
     setIsButLoading(true);
-   
+   dispatch(ACTION_ADD_ITEM_TO_CART({data:data,token:token.token}))
     setTimeout(() => {
       
       toast({
@@ -65,9 +68,9 @@ const SingleProduct = () => {
       })
     
       setIsButLoading(false);
-      handleCart(data[0])
+     
       setbagbutton(false)
-      console.log(data[0])
+      
     }, 1500);
    
     
