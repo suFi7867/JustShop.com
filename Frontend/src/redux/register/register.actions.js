@@ -9,7 +9,7 @@ export const registerUser = (creds) => async (dispatch) => {
   dispatch({ type: REGISTER_REQUEST });
   try {
     let res = await axios.post(
-      "https://masai-api-mocker.herokuapp.com/auth/register",
+      "http://localhost:8080/user/signup",
       creds
     );
     dispatch({ type: REGISTER_SUCCESS, payload: res.data });
