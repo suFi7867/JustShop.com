@@ -85,7 +85,7 @@ const MenSection = () => {
                         <Box>
                             <Text fontSize="15px" color="#333333">{item.title}</Text>
                             <Flex alignItems="center" justifyContent="center" gap="4px">
-                                <Text fontSize="18px" color="#0D6DD7">₹ {item.price}</Text>
+                                <Text fontSize="15px" color="#0D6DD7">₹ {item.price}</Text>
                                 <Button><span><Image src={cart} alt="cart" width="20px" /></span>Add to Cart</Button>
                             </Flex>
                         </Box>

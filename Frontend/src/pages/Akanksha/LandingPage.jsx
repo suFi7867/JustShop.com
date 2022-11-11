@@ -1,14 +1,15 @@
 import React from 'react'
-
-
+import Banner from "./components/Banner"
 import Brands from './components/Brands';
 import MenSection from './components/MenSection';
 import WomenSection from './components/WomenSection';
 import ElectronicSection from './components/ElectronicSection';
 import FlexItems from './components/FlexItems'
 import Why from './components/Why';
+import Gifts from './components/Gifts';
+import Advertisement from './components/Advertisement';
+import Reviews from './components/Reviews';
 
-import Banner from "./components/Banner"
 
 const LandingPage = () => {
   return (
@@ -18,8 +19,12 @@ const LandingPage = () => {
         <Why/>
         <Brands/>
         <MenSection/>
+        <Gifts/>
         <WomenSection/>
+        <Advertisement/>
         <ElectronicSection/>
+        <Reviews/>
+        <h1>Concludes</h1>
     </div>
   )
 }

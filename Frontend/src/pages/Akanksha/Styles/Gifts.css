@@ -1,0 +1,60 @@
+.giftBox{
+    width:80%;
+    margin:auto;
+    margin-top: 4rem;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.gift1{
+    background-image: url("https://media.istockphoto.com/id/960199148/photo/flat-lay-of-female-holiday-clothing-and-accessories.jpg?s=612x612&w=0&k=20&c=bbEfcNZA3auTAV2Wal3jCUSelJXpDXYeRQsrKmyshUc=");
+    width:50%;
+    height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.gift2{
+    background-image: url("https://theimaginestore.com/storage/Media/Lob/Category/Speakers-and-Headphones-accessories.jpg");
+    border: 4px solid #0D6DD7;
+    width:50%;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position:relative;
+}
+
+.text1{
+    font-size:2rem;
+    color:#333333;
+}
+.text2{
+    font-size:2.5rem;
+    font-weight: bold;
+    padding:5px;
+    background-color: #F3F3F3;
+    opacity:0.8
+}
+.text3{
+    font-size:2rem;
+    color:#333333;
+}
+
+
+.gift1>Button{
+    height:50px;
+    width:150px;
+    background-color: rgb(72, 202, 178);
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    padding: 5px 20px 4px;
+    line-height: 33px;
+    font-weight: 500;
+}
