@@ -6,15 +6,17 @@ import {
 } from "redux";
 import thunk from "redux-thunk";
 import { authReducer } from "./auth/auth.reducer";
+import { productReducer } from "./products/product.reducer";
 import { registerReducer } from "./register/register.reducer";
 
 const rootReducer = combineReducers({
   register: registerReducer,
   auth: authReducer,
+  product : productReducer
 });
 
-const createComposer = window.__REDUX_DEVTOOLS_COMPOSE__ || compose;
+const createComposer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 export const store = legacy_createStore(
   rootReducer,
-  createComposer(applyMiddleware(thunk))
+  createComposer(applyMiddleware(thunk))  
 );
