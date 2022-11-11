@@ -12,6 +12,9 @@ import SearchBar from './components/SearchBar';
 import SearchBar2 from './components/SearchBar2';
 import { VscHeart } from "react-icons/vsc";
 import { IoBagOutline } from "react-icons/io5";
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { ACTION_GET_PRODUCTS } from '../../redux/products/product.actions';
 
 
 const Links = [
@@ -40,6 +43,17 @@ const Links = [
 
 const Navbar = () => {
 
+  const dispatch = useDispatch()
+
+  const  {  data , loading , error } = useSelector((store)=> store.product)
+
+  useEffect(()=>{
+    dispatch( ACTION_GET_PRODUCTS() )
+  },[])
+
+
+  console.log(data)
+
   const isAuth = false
 
     const { colorMode, toggleColorMode } = useColorMode()
@@ -50,6 +64,9 @@ const Navbar = () => {
     const LogOutUser = ()=>{
 
     }
+
+
+
 // borderBottom="1px solid #eeee"
 
   return (
