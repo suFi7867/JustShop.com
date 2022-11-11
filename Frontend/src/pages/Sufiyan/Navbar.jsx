@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Circle,
   Divider,
   Drawer,
   DrawerBody,
@@ -61,13 +62,19 @@ const Links = [
     name: "About Us",
     path: "/about",
   },
+ 
 ];
 
 const Navbar = () => {
+
+  const AdminIsAuth = false
+
   const dispatch = useDispatch();
 
   const { data, loading, error } = useSelector((store) => store.product);
   const { token, isAuth } = useSelector((store) => store.auth);
+  const { data: cartData } = useSelector((store) => store.cart);
+
   let userName;
   if(isAuth){
     userName = token.token.split("#");
@@ -80,7 +87,7 @@ const Navbar = () => {
     }
   }, [isAuth]);
 
-  console.log(data);
+  console.log(cartData.length);
 
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -94,7 +101,7 @@ const Navbar = () => {
   return (
     <Box style={{ position: "sticky", top: 0, zIndex: "999" }}>
       <HStack
-        bg="#14244b"
+        bg={AdminIsAuth ? "#025d93" : "#14244b"}
         style={{ position: "sticky", top: 0 }}
         p="0px 8%"
         justify="center"
@@ -175,6 +182,8 @@ const Navbar = () => {
                     icon={<IoBagOutline />}
                   />
                 </NavLink>
+               
+              
                 <IconButton
                   fontSize="25px"
                   borderRadius={50}
@@ -218,17 +227,29 @@ const Navbar = () => {
                   //onClick={toggleColorMode}
                   icon={<VscHeart />}
                 />
+             
 
                 <NavLink to="/cart">
+                <HStack>
                   <IconButton
                     fontSize="25px"
                     borderRadius={50}
                     variant="link"
                     //onClick={toggleColorMode}
                     icon={<IoBagOutline />}
-                  />
+                    />
+                      <Text marginLeft={"-50px"} >
+                {cartData.length !== 0 ? <Circle 
+                minWidth={30} bg="white" 
+                 >{cartData.length}</Circle> : "" }
+                </Text>
+                       </HStack>
                 </NavLink>
-
+              
+               
+             
+                 
+              
                 <IconButton
                   fontSize="25px"
                   borderRadius={50}
@@ -320,7 +341,7 @@ const Navbar = () => {
 
               <VStack>
                 {Links.map((el) => (
-                  <VStack w={"100%"}>
+                  <VStack w={"80%"}>
                     <NavLink
                       key={el.path}
                       to={el.path}
@@ -335,7 +356,7 @@ const Navbar = () => {
                         w={"100%"}
                         fontSize="20px"
                         fontWeight={"semibold"}
-                        p="10px 10px"
+                        p="10px 5px"
                       >
                         {el.name}
                       </Text>
@@ -387,7 +408,7 @@ const Navbar = () => {
       </HStack>
 
       <HStack
-        bg="#0d6dd7"
+        bg={AdminIsAuth ? "#025d93" : "#0d6dd7"}
         // style={{position:"sticky", top:0 }}
         p="0px 8%"
         justify="center"
@@ -410,6 +431,22 @@ const Navbar = () => {
                 </Text>
               </NavLink>
             ))}
+
+         { AdminIsAuth && <NavLink
+              key={"el.path"}
+              to={"/admin"}
+              className={({ isActive }) =>
+              isActive ? "activeS" : "defaultS"
+            }
+            end
+           >
+             <Text fontSize="20px" color="whiteAlpha.900" p="10px 10px">
+                  {"Admin"}
+                </Text>
+                           
+           </NavLink>}
+
+
           </HStack>
         </Box>
       </HStack>
