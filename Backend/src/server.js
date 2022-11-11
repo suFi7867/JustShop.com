@@ -1,11 +1,13 @@
 const express = require("express");
+
 require("dotenv").config();
 const connect = require("./config/db");
 const cors = require("cors");
 const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors()); /// Ye File Upar Rahengi
+
 
 const UserRoute = require("./features/user/user.router");
 const MenRoute = require("./features/mens/mens.router");

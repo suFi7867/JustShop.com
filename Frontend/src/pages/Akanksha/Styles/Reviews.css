@@ -1,0 +1,27 @@
+
+.lastBox{
+    margin: auto;
+    margin-top:5rem;
+    width:80%;
+    margin-bottom: 4rem;
+}
+
+.reviewBox{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    border:1px solid #9097AB;
+    width:25%;
+    padding:10px;
+}
+
+.comment{
+    font-size:1rem;
+}
+
+.author{
+    font-size: 1rem;
+    color:grey
+}
