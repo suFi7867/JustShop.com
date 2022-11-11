@@ -24,7 +24,6 @@ const LandingPage = () => {
         <Advertisement/>
         <ElectronicSection/>
         <Reviews/>
-        <h1>Concludes</h1>
     </div>
   )
 }

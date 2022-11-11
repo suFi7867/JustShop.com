@@ -1,13 +1,13 @@
 import React from 'react';
-import {Box,Text,Button,Flex} from "@chakra-ui/react"
+import {Box,Text} from "@chakra-ui/react"
 import "../Styles/Advertisement.css"
 
 const Advertisement = () => {
   return (
     <Box className="advBox">
-        <Text className="caption">Fine engineering only for your ears</Text>
+        {/* <Text className="caption">Fine engineering only for your ears</Text> */}
         <Text className="slogan1">Hear it. Feel it.</Text>
-        <Text className="slogan2">Unravelling, The Sound of Silence</Text>
+        {/* <Text className="slogan2">Unravelling, The Sound of Silence</Text> */}
     </Box>
   )
 }
