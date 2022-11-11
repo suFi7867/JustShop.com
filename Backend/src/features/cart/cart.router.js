@@ -21,3 +21,9 @@ app.post("/", async (req, res) => {
 });
 
 module.exports = app;
+
+
+// {
+//   token:"sufi@gmail.com#123456",
+//   cartData:[{},{}]
+// }
