@@ -57,7 +57,7 @@ const Register = () => {
   return (
     <HStack w="full">
       <VStack
-        spacing={5}
+        spacing={3}
         w="100vh"
         padding={{ base: "20px", md: "50px 100px" }}
         height="100vh"
@@ -68,7 +68,7 @@ const Register = () => {
           </Text>
         </Stack>
 
-        <Stack spacing={5} w="full">
+        <Stack spacing={3} w="full">
           <FormControl>
             <FormLabel>Name</FormLabel>
             <Input
@@ -111,16 +111,16 @@ const Register = () => {
             <Input type="password" placeholder="Re-Enter Your Password..." />
           </FormControl>
         </Stack>
-        <Stack textAlign="left" spacing={5} w="full">
+        <Stack textAlign="left" spacing={3} w="full">
           <Recaptcha />
-          <Button
+          <Button       
             onClick={handleClick}
             w="full"
             colorScheme="facebook"
             variant="solid"
           >
             {"Create your new account"}
-            {/* {Loading && (
+            {loading && (
               <Spinner
                 thickness="4px"
                 speed="0.55s"
@@ -128,7 +128,7 @@ const Register = () => {
                 color="blue.500"
                 size="lg"
               />
-            )} */}
+            )}
           </Button>
         </Stack>
       </VStack>

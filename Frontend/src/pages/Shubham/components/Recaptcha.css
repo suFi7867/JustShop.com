@@ -1,5 +1,5 @@
 .captcha {
-  width: 70%;
+  width: 100%;
   height: 4rem;
   background-color: #f9f9f9;
   border: 2px solid #d3d3d3;
@@ -201,7 +201,13 @@ input[type="checkbox"]:checked + .checkmark > span:before {
   color: teal;
 }
 
-@media (min-width: 360px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 480px) {
+  .captcha {
+    width: 80%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
   .captcha {
     width: 40%;
   }
