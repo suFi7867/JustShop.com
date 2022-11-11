@@ -1,0 +1,38 @@
+
+.advBox{
+    width:90%;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: -2rem;
+    background-image: url("https://cdn.shopify.com/s/files/1/0516/3761/6830/collections/1_2000x.jpg?v=1642056917");
+    height:400px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position:relative;
+    padding:17px;
+    box-shadow: 0 0 20px 20px white inset;
+
+}
+
+/* .caption{
+    font-size: 2.5rem;
+    color:#F3F3F3;
+    font-weight: bold;
+    text-align: left;
+} */
+
+.slogan1{
+    font-size:6rem;
+    color:#14244B;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 3.2rem;
+}
+
+/* .slogan2{
+    font-size:2.5rem;
+    color:#FFCA3A;
+    font-weight: bold;
+    text-align: left;
+} */
