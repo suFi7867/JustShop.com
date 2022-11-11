@@ -23,7 +23,7 @@ app.post("/login", async (req, res) => {
 });
 
 app.post("/signup", async (req, res) => {
-  const { email, password, age, name } = req.body;
+  const { name, surname, email, password } = req.body;
 
   try {
     let existUser = await User.findOne({ email });
@@ -32,9 +32,9 @@ app.post("/signup", async (req, res) => {
       res.status(404).send("email id already exist try another email");
     } else {
       let user = await User.create({
-        email,
         name,
-        age,
+        surname,
+        email,
         password,
       });
 

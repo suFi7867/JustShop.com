@@ -5,6 +5,7 @@ const cors = require("cors");
 const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 const UserRoute = require("./features/user/user.router");
 const MenRoute = require("./features/mens/mens.router");
@@ -17,7 +18,6 @@ app.use("/womens", WomenRoute);
 app.use("/electronics", ElectronicRoute);
 app.use("/cart", CartRoute);
 
-app.use(cors());
 
 app.listen(PORT, async () => {
   await connect();
