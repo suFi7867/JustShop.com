@@ -6,9 +6,8 @@
     justify-content: center;
     align-items: center;
     border: 1px solid #14244B;
-    flex-direction: column;
-    gap:1.5rem;
-    padding:10px;
+    gap:4rem;
+    padding:5px;
 }
 
 .brandImg{
@@ -22,8 +21,8 @@
 
 .timerBox{
     border: 5px solid #14244B ;
-    height:150px;
-    width:150px;
+    height:160px;
+    width:160px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -31,5 +30,4 @@
     border-radius: 50%;
     font-size: 1.5rem;
     font-weight: bold;
-
 }

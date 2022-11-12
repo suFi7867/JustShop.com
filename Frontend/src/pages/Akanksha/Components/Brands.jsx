@@ -27,10 +27,13 @@ const Brands = () => {
 
   return (
     <Flex className="brandBox">
-        <Box style={{fontSize:"1.5rem",fontWeight:"bold", color:"#14244B", marginTop:"10px"}}>Out Top Brands</Box>
-
-        <Flex gap="2rem">
+        <Flex gap="2.3rem" direction="column">
+            <Box style={{fontSize:"1.5rem",fontWeight:"bold", color:"#14244B", marginTop:"10px"}}>Sale Ends In</Box>
             <Box className="timerBox">{date.toLocaleTimeString()}</Box>
+        </Flex>
+
+        <Flex gap="3.5rem" direction="column"> 
+           <Box style={{fontSize:"1.5rem",fontWeight:"bold", color:"#14244B", marginTop:"10px"}}>Out Top Brands</Box>
            <Flex gap="1rem">
             {
                 brands.map((item)=>(
