@@ -68,7 +68,7 @@ const Links = [
 
 const Navbar = () => {
 
-  const AdminIsAuth = false
+  const AdminIsAuth = true
 
   const dispatch = useDispatch();
 
