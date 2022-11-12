@@ -1,7 +1,9 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import AdminProducts from '../pages/Akanksha/AdminProducts'
 
 import LandingPage from '../pages/Akanksha/LandingPage'
+import AllUsers from '../pages/Akash/AllUsers'
 import Cart from '../pages/Akash/Cart'
 import Electronic from '../pages/Ankit/Electronic'
 import MenProducts from '../pages/Ankit/MenProducts'
@@ -75,11 +77,10 @@ const AllRoutes = () => {
             <Route   index element={< Dashboard/>} />
             <Route  exact path="dashboard" element={<Dashboard/>} />
             <Route  exact path="orders" element={< Orders/>} />
-            <Route  exact path="products" element={<div>SUFI</div>} />
-            <Route  exact path="profile" element={<div></div>} />
+            <Route  exact path="products" element={<AdminProducts/>} />
+            <Route  exact path="users/list" element={<AllUsers/>} />
           </Route>
          
-
         </Routes>
       
     </div>
