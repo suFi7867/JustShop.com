@@ -17,4 +17,4 @@ export const login = (creds) => async (dispatch) => {
   }
 };
 
-export const logout = () => ({ type: LOGOUT });
+export const ActionLogout = () => ({ type: LOGOUT });
