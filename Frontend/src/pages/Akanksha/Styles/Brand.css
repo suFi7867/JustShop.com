@@ -3,9 +3,9 @@
     width:80%;
     margin:auto;
     margin-top: 4rem;
+    display:flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #14244B;
     gap:4rem;
     padding:5px;
 }

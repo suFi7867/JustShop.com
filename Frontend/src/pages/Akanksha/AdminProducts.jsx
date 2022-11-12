@@ -10,11 +10,11 @@ const AdminProducts = () => {
          
          <Flex direction="column" justifyContent="center" alignItems="center">
            
-            <Box><Image src="https://thumbs.gfycat.com/CompleteShallowFlyingsquirrel-size_restricted.gif" /></Box>
+            <Box><Image minWidth="400px" src="https://thumbs.gfycat.com/CompleteShallowFlyingsquirrel-size_restricted.gif" /></Box>
          </Flex>
 
 
-         <Flex direction="column" justifyContent="center" alignItems="flex-start" gap="1.2rem">
+         <Flex p={50} direction="column" justifyContent="center" alignItems="flex-start" gap="1.2rem">
              <Flex direction="column" justifyContent="center" alignItems="flex-start" gap="1.2rem">
                 <Text fontSize="1.5rem" fontWeight="bold" color="#0D6DD7">Choose Category</Text>
              </Flex>
