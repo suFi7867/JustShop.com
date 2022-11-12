@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box,Flex,Text} from "@chakra-ui/react";
+import {Box,Flex,Text, Stack} from "@chakra-ui/react";
 import "../Styles/Reviews.css"
 
 const reviews=[
@@ -27,17 +27,17 @@ const reviews=[
 
 const Reviews = () => {
   return (
-    <Flex gap={4} className="lastBox">
+    <Stack gap={4} className="lastBox" direction={['column', 'row']}>
          {
             reviews.map((item)=>(
-                <Box key={item.id} className="reviewBox">
+                <Stack key={item.id} className="reviewBox" width={{ base: '100%', sm: '50%', md: '25%' }}>
                     <hr style={{border:"1px solid #0D6DD7", width:"80%"}}></hr>
-                    <Text className="comment">"{item.comment}"</Text>
-                    <Text className="author">{item.author}</Text>
-                </Box>
+                    <Text fontSize={{ base: '10px', md: '13px', lg: '15px' }} >"{item.comment}"</Text>
+                    <Text fontSize={{ base: '10px', md: '13px', lg: '15px' }} color="grey">{item.author}</Text>
+                </Stack>
             ))
          }
-    </Flex>
+    </Stack>
   )
 }
 

@@ -71,10 +71,6 @@ const AdminProducts = () => {
               resize={resize}
             />
 
-            <Input placeholder="Basic usage" />
-            <Input placeholder="Basic usage" />
-            <Input placeholder="Basic usage" />
-            <Input placeholder="Basic usage" />
           </VStack>
           <RadioGroup value={value} onChange={setvalue}>
             <VStack spacing="24px" align="left">

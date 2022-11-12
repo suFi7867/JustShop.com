@@ -44,3 +44,10 @@ reportWebVitals();
 // npm i redux react-redux redux-thunk
 // npm i axios
 //npm i react-multi-carousel
+
+// npm i react-vis
+
+// npm i sass
+// npm i node-sass
+// npm i react-transition-group
+// npm install --save-dev sass-loader sass webpack

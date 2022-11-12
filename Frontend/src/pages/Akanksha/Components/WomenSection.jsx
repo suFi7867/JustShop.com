@@ -1,10 +1,10 @@
 import React from 'react'
-import {Flex,Box,Image,Text, Button} from "@chakra-ui/react"
-import cart from "../Assets/cart.png";
+import {Flex,Box,Image,Text, Button, Stack} from "@chakra-ui/react"
+import cartblack from "../Assets/cartblack.png";
 import "../Styles/Clothing.css";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
+import {Link} from "react-router-dom"
 
 const items=[
     
@@ -69,11 +69,11 @@ items: 1
 
 const MenSection = () => {
   return (
-    <Flex className="menSec" gap="3rem">
+    <Stack className="menSec" direction={['column', 'row']} gap="3rem">
         <Box className="menBox">
             <Image className="menImage" src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/productimage/2020/10/11/b0050a33-18a0-436c-b3a6-e05d2b303ebd1602367973649-1.jpg" />
             <Box style={{fontSize:'1.6rem', fontWeight:"bold"}}>Women's Accessories</Box>
-            <Button style={{backgroundColor:"#0D6DD7",color:"#F3F3f3"}}>Show All Products</Button>
+            <Link to="/women-clothing"><Button style={{backgroundColor:"#0D6DD7",color:"#F3F3f3"}}>Show All Products</Button></Link>
         </Box>
 
         <Box style={{width:"70%"}} className="carouselBox">
@@ -84,9 +84,9 @@ const MenSection = () => {
                         <Box className="imageBox"><Image src={item.src} alt="sellers" width="170px" /></Box>
                         <Box>
                             <Text fontSize="15px" color="#333333">{item.title}</Text>
-                            <Flex alignItems="center" justifyContent="center" gap="4px">
-                                <Text fontSize="15px" color="#0D6DD7">₹ {item.price}</Text>
-                                <Button><span><Image src={cart} alt="cart" width="20px" /></span>Add to Cart</Button>
+                            <Flex justifyContent="center" alignItems="center" gap="1rem">
+                                <Text fontSize="15px" fontWeight="semibold" color="#0D6DD7">₹ {item.price}</Text>
+                                <Button><Image src={cartblack} alt="cart" width="20px" /></Button>
                             </Flex>
                         </Box>
                     </Box>
@@ -94,7 +94,7 @@ const MenSection = () => {
              }
            </Carousel>
         </Box>
-    </Flex>
+    </Stack>
   )
 }
 

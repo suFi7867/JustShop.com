@@ -1,9 +1,10 @@
 import React from 'react'
-import {Flex,Box,Image,Text, Button} from "@chakra-ui/react"
-import cart from "../Assets/cart.png";
+import {Flex,Box,Image,Text, Button, Stack} from "@chakra-ui/react"
+import cartblack from "../Assets/cartblack.png";
 import "../Styles/Clothing.css";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import {Link} from "react-router-dom"
 
 
 const items=[
@@ -68,15 +69,18 @@ items: 1
 };
 
 const MenSection = () => {
+
+   
+
   return (
-    <Flex className="menSec" gap="3rem">
+    <Stack className="menSec" direction={['column', 'row']} gap="3rem">
         <Box className="menBox">
             <Image className="menImage" src="https://static.magicpin.com/storage/blog/images/myntra-online-shopping-for-mens_Formal_Shirt.jpg" />
             <Box style={{fontSize:'1.6rem', fontWeight:"bold"}}>Men's Accessories</Box>
-            <Button style={{backgroundColor:"#0D6DD7",color:"#F3F3f3"}}>Show All Products</Button>
+            <Link to="/men-clothing"><Button style={{backgroundColor:"#0D6DD7",color:"#F3F3f3"}}>Show All Products</Button></Link>
         </Box>
 
-        <Box style={{width:"70%"}} className="carouselBox" >
+        <Box style={{width:"70%"}} className="carouselBox">
             <Carousel responsive={responsive}>
              {
                 items.map((item)=>(
@@ -84,9 +88,9 @@ const MenSection = () => {
                         <Box className="imageBox"><Image src={item.src} alt="sellers" width="170px" /></Box>
                         <Box>
                             <Text fontSize="15px" color="#333333">{item.title}</Text>
-                            <Flex alignItems="center" gap="4px">
-                                <Text fontSize="15px" color="#0D6DD7">₹ {item.price}</Text>
-                                <Button><span><Image src={cart} alt="cart" width="20px" /></span>Add to Cart</Button>
+                            <Flex justifyContent="center" alignItems="center" gap="1rem">
+                                <Text fontSize="15px" fontWeight="semibold" color="#0D6DD7">₹ {item.price}</Text>
+                                <Button><Image src={cartblack} alt="cart" width="20px" /></Button>
                             </Flex>
                         </Box>
                     </Box>
@@ -94,7 +98,7 @@ const MenSection = () => {
              }
            </Carousel>
     </Box>
-    </Flex>
+    </Stack>
   )
 }
 

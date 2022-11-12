@@ -26,7 +26,7 @@ const Brands = () => {
   }, []);
 
   return (
-    <Flex className="brandBox">
+    <Box className="brandBox" display={{base:"none", md:'flex'}}>
         <Flex gap="2.3rem" direction="column">
             <Box style={{fontSize:"1.5rem",fontWeight:"bold", color:"#14244B", marginTop:"10px"}}>Sale Ends In</Box>
             <Box className="timerBox">{date.toLocaleTimeString()}</Box>
@@ -44,7 +44,7 @@ const Brands = () => {
             }
            </Flex>
         </Flex>
-    </Flex>
+    </Box>
   )
 }
 
