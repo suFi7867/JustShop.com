@@ -43,6 +43,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ACTION_GET_PRODUCTS } from "../../redux/products/product.actions";
 import { ACTION_GET_CART } from "../../redux/cart/cart.actions";
 import { ACTION_GET_ADMIN } from "../../redux/admin/admin.actions";
+import { ActionLogout } from "../../redux/auth/auth.actions";
 
 const Links = [
   {
@@ -74,6 +75,7 @@ const Navbar = () => {
   const { token, isAuth, AdminIsAuth } = useSelector((store) => store.auth);
   const { data: cartData } = useSelector((store) => store.cart);
 
+
   let userName;
   if (isAuth) {
     userName = token.token.split("#");
@@ -95,7 +97,9 @@ const Navbar = () => {
 
   const [OpenSearch, SetOpenSearch] = useState("none");
 
-  const LogOutUser = () => {};
+  const LogOutUser = () => {
+    dispatch(ActionLogout());
+  };
 
   // borderBottom="1px solid #eeee"
 
