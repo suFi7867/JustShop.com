@@ -23,7 +23,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
 import { login } from "../../redux/auth/auth.actions";
 import { signInWithGoogle } from "./components/firbase";
-// import Loader from "../components/SmallComponents/Loader";
+import Loading from "../Sufiyan/components/Loding";
 
 const Login = () => {
   const { isAuth, loading, error, errorMessage } = useSelector(
@@ -31,6 +31,7 @@ const Login = () => {
   );
   const dispatch = useDispatch();
   const [loginCreds, setLoginCreds] = useState({});
+  const toast = useToast();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,16 +42,52 @@ const Login = () => {
   };
 
   const handleClick = () => {
-    dispatch(login(loginCreds));
+    if (!loginCreds.email || !loginCreds.password) {
+      toast({
+        title: "All fields are mandatory",
+        description: "Please fill all the details",
+        status: "error",
+        duration: 4000,
+        isClosable: true,
+      });
+    } else {
+      dispatch(login(loginCreds));
+    }
   };
 
-  if (isAuth) {
-    return <Navigate to="/" />;
-  }
+  const handleGoogle = () => {
+    signInWithGoogle();
+    toast({
+      title: "Logged in successfully",
+      description: "Go and get exciting offers...",
+      status: "success",
+      duration: 4000,
+      isClosable: true,
+    });
+    dispatch(login());
+  };
+
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   } else if (error) {
-    return <div>{errorMessage}</div>;
+    toast({
+      title: "Wrong Credentials",
+      description: "Incorrect Email or Password",
+      status: "error",
+      duration: 4000,
+      isClosable: true,
+    });
+    return <Navigate to="/login" />;
+  }
+  if (isAuth) {
+    toast({
+      title: "Logged in successfully",
+      description: "Go and get exciting offers...",
+      status: "success",
+      duration: 4000,
+      isClosable: true,
+    });
+    return <Navigate to="/" />;
   }
   return (
     <HStack w="full">
@@ -80,7 +117,7 @@ const Login = () => {
               w="full"
               colorScheme="messenger"
               variant="solid"
-              onClick={signInWithGoogle}
+              onClick={handleGoogle}
             >
               Sign In With Google
             </Button>
@@ -93,7 +130,13 @@ const Login = () => {
                 w={25}
               />
             </IconButton>
-            <Button w="full" bg="blackAlpha.600" color="white" variant="solid">
+            <Button
+              onClick={handleGoogle}
+              w="full"
+              bg="blackAlpha.600"
+              color="white"
+              variant="solid"
+            >
               Sign In With Email
             </Button>
           </ButtonGroup>
@@ -159,7 +202,7 @@ const Login = () => {
       <VStack
         textAlign="left"
         w="full"
-        padding={100}
+        padding={50}
         height="100vh"
         bg="#ebeef9"
         display={{ base: "none", md: "block" }}
@@ -189,18 +232,14 @@ const Login = () => {
           width="full"
           fontSize="15px"
           fontWeight="thin"
-          maxWidth={{ base: "100%", md: "60%", lg: "60%" }}
+          maxWidth={{ base: "100%", md: "40%", lg: "40%" }}
         >
           If you are a new visitor to our website simply register yourself
           here...
         </Text>
 
         <Link to="/register">
-          <Button
-            variant="outline"
-            colorScheme="messanger"
-            bgColor="facebook.200"
-          >
+          <Button colorScheme="facebook" variant="solid">
             Create new account
           </Button>
         </Link>

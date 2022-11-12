@@ -117,7 +117,7 @@ const AllRoutes = () => {
         <Route path="/electronics" element={<Electronic />} />
 
         <Route
-          path="/products/:id"
+          path="/products/:type/:id"
           element={
             <PrivateRoute>
               <SingleProduct />

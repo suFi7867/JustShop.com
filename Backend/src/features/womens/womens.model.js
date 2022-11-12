@@ -1,26 +1,16 @@
 const mongoose = require("mongoose");
 
 const womenSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-  },
-  img: {
-    type: String,
-  },
-  price: {
-    type: Number,
-    required: true,
-    min: 1,
-  },
-  quantity: {
-    type: Number,
-    required: true,
-    min: 0,
-  },
+  id: { type: String, require: true },
+  name: { type: String },
+  quantity: { type: String },
+  defaultImage: { type: String },
+  hoverImage: { type: String },
+  price: { type: String },
+  strikePrice: { type: String },
+  firstImages: { type: Array },
+  secondImages: { type: Array },
+  thirdImages: { type: Array },
 });
 
 const Women = mongoose.model("women", womenSchema);
