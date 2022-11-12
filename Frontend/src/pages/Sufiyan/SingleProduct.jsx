@@ -94,7 +94,7 @@ const SingleProduct = () => {
         return false
     })
     //console.log(data)
-    console.log("I am running from singleProductPage");
+    // console.log("I am running from singleProductPage");
  
     setData(obj)
     
@@ -283,7 +283,7 @@ Sleeve Length (in Inch):
 
         <HStack w="full" > 
 
-        <Button  onClick={()=>handleClick()} fontSize="x-large" padding={8} w="full" colorScheme='messenger'> 
+        <Button  onClick={()=>handleClick()} fontSize="x-large" padding={8} w="50%" colorScheme='messenger'> 
 
         <BiShoppingBag fontSize={{base:"25px",sm:"25px", md:"3xl"}}/> 
         
@@ -302,9 +302,9 @@ Sleeve Length (in Inch):
         
         </Button>
 
-        <Button fontSize={{base:"25px",sm:"25px", md:"3xl"}} padding={8} w="full" colorScheme='yellow' >
+        <Button fontSize={{base:"25px",sm:"25px", md:"3xl"}} padding={8}  colorScheme='yellow' >
             
-              <AiOutlineHeart  /> WISHLIST
+              <AiOutlineHeart  /> 
               
               
        </Button>

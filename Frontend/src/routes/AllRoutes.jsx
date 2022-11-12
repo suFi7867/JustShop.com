@@ -15,6 +15,7 @@ import Dashboard from "../pages/Sufiyan/Dashboard";
 
 import Orders from "../pages/Sufiyan/pages/Orders";
 import Payment from "../pages/Sufiyan/Payment";
+
 import PurchaseSucessfull from "../pages/Sufiyan/PurchaseSucessfull";
 import SingleProduct from "../pages/Sufiyan/SingleProduct";
 import Team from "../pages/Sufiyan/Team";

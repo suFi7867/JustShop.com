@@ -10,6 +10,7 @@ import {
 import * as React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 import { formatPrice } from "./PriceTag";
 const OrderSummaryItem = (props) => {
   const { label, value, children } = props;
@@ -26,6 +27,10 @@ const OrderSummaryItem = (props) => {
 export const CartOrderSummary = () => {
   const { data } = useSelector((store) => store.cart);
   const total = data.reduce((a, b) => a + b.price, 0);
+
+ 
+
+
   return (
     <Stack spacing="8" borderWidth="1px" rounded="lg" padding="8" width="full">
       <Heading size="md">Order Summary</Heading>
@@ -51,14 +56,19 @@ export const CartOrderSummary = () => {
           </Text>
         </Flex>
       </Stack>
+      <NavLink to="/checkout/payment">
       <Button
+      w={"full"}
         colorScheme="blue"
         size="lg"
+        
         fontSize="md"
         rightIcon={<FaArrowRight />}
-      >
+        >
         Checkout
       </Button>
+
+        </NavLink>
     </Stack>
   );
 };
