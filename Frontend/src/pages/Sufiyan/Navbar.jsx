@@ -42,6 +42,7 @@ import { IoBagOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { ACTION_GET_PRODUCTS } from "../../redux/products/product.actions";
 import { ACTION_GET_CART } from "../../redux/cart/cart.actions";
+import { ACTION_GET_ADMIN } from "../../redux/admin/admin.actions";
 
 const Links = [
   {
@@ -58,31 +59,30 @@ const Links = [
     path: "/electronics",
   },
 
-
   {
     name: "About Us",
     path: "/about",
   },
- 
 ];
 
 const Navbar = () => {
-
-  const AdminIsAuth = true
+  // const AdminIsAuth = true
 
   const dispatch = useDispatch();
 
   const { data, loading, error } = useSelector((store) => store.product);
-  const { token, isAuth } = useSelector((store) => store.auth);
+  const { token, isAuth, AdminIsAuth } = useSelector((store) => store.auth);
   const { data: cartData } = useSelector((store) => store.cart);
 
   let userName;
-  if(isAuth){
+  if (isAuth) {
     userName = token.token.split("#");
     userName = userName[0];
-  }  
+  }
   useEffect(() => {
     dispatch(ACTION_GET_PRODUCTS());
+    dispatch(ACTION_GET_ADMIN());
+
     if (isAuth) {
       dispatch(ACTION_GET_CART(token.token));
     }
@@ -134,14 +134,13 @@ const Navbar = () => {
 
           <HStack
             w={{ base: "full", md: "fit-content" }}
-          
             justifyContent="space-around"
           >
             <Box visibility={{ base: "hidden", md: "visible" }}>
               <SearchBar />
             </Box>
           </HStack>
-          <Spacer  display={{ base: "none", md: "block" }} />
+          <Spacer display={{ base: "none", md: "block" }} />
 
           {!isAuth ? (
             <Box display={{ base: "none", md: "none", lg: "block" }}>
@@ -183,8 +182,7 @@ const Navbar = () => {
                     icon={<IoBagOutline />}
                   />
                 </NavLink>
-               
-              
+
                 <IconButton
                   fontSize="25px"
                   borderRadius={50}
@@ -228,29 +226,28 @@ const Navbar = () => {
                   //onClick={toggleColorMode}
                   icon={<VscHeart />}
                 />
-             
 
                 <NavLink to="/cart">
-                <HStack>
-                  <IconButton
-                    fontSize="25px"
-                    borderRadius={50}
-                    variant="link"
-                    //onClick={toggleColorMode}
-                    icon={<IoBagOutline />}
+                  <HStack>
+                    <IconButton
+                      fontSize="25px"
+                      borderRadius={50}
+                      variant="link"
+                      //onClick={toggleColorMode}
+                      icon={<IoBagOutline />}
                     />
-                      <Text marginLeft={"-50px"} >
-                {cartData.length !== 0 ? <Circle 
-                minWidth={30} bg="white" 
-                 >{cartData.length}</Circle> : "" }
-                </Text>
-                       </HStack>
+                    <Text marginLeft={"-50px"}>
+                      {cartData.length !== 0 ? (
+                        <Circle minWidth={30} bg="white">
+                          {cartData.length}
+                        </Circle>
+                      ) : (
+                        ""
+                      )}
+                    </Text>
+                  </HStack>
                 </NavLink>
-              
-               
-             
-                 
-              
+
                 <IconButton
                   fontSize="25px"
                   borderRadius={50}
@@ -269,26 +266,20 @@ const Navbar = () => {
           )}
 
           <HStack
-            display={{ base: "-webkit-inline-flex",
-             md: "none", lg: "none" }}
+            display={{ base: "-webkit-inline-flex", md: "none", lg: "none" }}
           >
-
-<NavLink to="/cart">
-               
-               <IconButton
-                 fontSize="25px"
-                 borderRadius={50}
-                 variant="link"
-                 //onClick={toggleColorMode}
-                 icon={<IoBagOutline />}
-                 />
-
-             </NavLink>
-
+            <NavLink to="/cart">
+              <IconButton
+                fontSize="25px"
+                borderRadius={50}
+                variant="link"
+                //onClick={toggleColorMode}
+                icon={<IoBagOutline />}
+              />
+            </NavLink>
 
             <IconButton
               variant="link"
-             
               fontSize="x-large"
               onClick={() =>
                 SetOpenSearch(OpenSearch == "none" ? "block" : "none")
@@ -296,19 +287,14 @@ const Navbar = () => {
               icon={<BiSearch />}
             ></IconButton>
 
-
-
             <IconButton
               onClick={() => onOpen()}
               icon={<AiOutlineMenu />}
             ></IconButton>
-
-
           </HStack>
         </HStack>
 
-        <Drawer placement="right" 
-        onClose={onClose} isOpen={isOpen} size="full">
+        <Drawer placement="right" onClose={onClose} isOpen={isOpen} size="full">
           <DrawerOverlay />
 
           <DrawerContent>
@@ -342,7 +328,6 @@ const Navbar = () => {
             <DrawerBody>
               {isAuth && (
                 <VStack>
-                 
                   <HStack>
                     <Text fontSize="xl">
                       <ImAndroid />
@@ -380,29 +365,28 @@ const Navbar = () => {
                     <Divider />
                   </VStack>
                 ))}
-   <VStack w={"80%"}>
-                    <NavLink
-                      key={"el.padsdth"}
-                      to={"/cart"}
+                <VStack w={"80%"}>
+                  <NavLink
+                    key={"el.padsdth"}
+                    to={"/cart"}
+                    w={"100%"}
+                    onClick={() => onClose()}
+                    className={({ isActive }) =>
+                      isActive ? "SmallactiveS" : "SmalldefaultS"
+                    }
+                    end
+                  >
+                    <Text
                       w={"100%"}
-                      onClick={() => onClose()}
-                      className={({ isActive }) =>
-                        isActive ? "SmallactiveS" : "SmalldefaultS"
-                      }
-                      end
+                      fontSize="20px"
+                      fontWeight={"semibold"}
+                      p="10px 5px"
                     >
-                      <Text
-                        w={"100%"}
-                        fontSize="20px"
-                        fontWeight={"semibold"}
-                        p="10px 5px"
-                      >
-                        Cart
-                      </Text>
-                    </NavLink>
-                    <Divider />
-                  </VStack>
-
+                      Cart
+                    </Text>
+                  </NavLink>
+                  <Divider />
+                </VStack>
               </VStack>
 
               {!isAuth ? (
@@ -447,8 +431,7 @@ const Navbar = () => {
       </HStack>
 
       <HStack
-      
-      justifyContent={{sm:"flex-end", xl:"center"}}
+        justifyContent={{ sm: "flex-end", xl: "center" }}
         bg={AdminIsAuth ? "#025d93" : "#0d6dd7"}
         // style={{position:"sticky", top:0 }}
         p="0px 8%"
@@ -456,15 +439,10 @@ const Navbar = () => {
         w="100%"
         h={{ base: "20px", md: "54px" }}
       >
-        <Box 
-        display={{ base: "none", md: "block", lg: "block" }}>
-          <HStack  
-          
-          w={"fit-content"}
-          gap={{base:10,md:"5px", lg:50}}>
+        <Box display={{ base: "none", md: "block", lg: "block" }}>
+          <HStack w={"fit-content"} gap={{ base: 10, md: "5px", lg: 50 }}>
             {Links.map((el) => (
               <NavLink
-             
                 key={el.path}
                 to={el.path}
                 className={({ isActive }) =>
@@ -472,27 +450,26 @@ const Navbar = () => {
                 }
                 end
               >
-                <Text   fontSize="20px" color="whiteAlpha.900" p="10px 10px">
+                <Text fontSize="20px" color="whiteAlpha.900" p="10px 10px">
                   {el.name}
                 </Text>
               </NavLink>
             ))}
 
-         { AdminIsAuth && <NavLink
-              key={"el.path"}
-              to={"/admin"}
-              className={({ isActive }) =>
-              isActive ? "activeS" : "defaultS"
-            }
-            end
-           >
-             <Text fontSize="20px" color="whiteAlpha.900" p="10px 10px">
+            {AdminIsAuth && (
+              <NavLink
+                key={"el.path"}
+                to={"/admin"}
+                className={({ isActive }) =>
+                  isActive ? "activeS" : "defaultS"
+                }
+                end
+              >
+                <Text fontSize="20px" color="whiteAlpha.900" p="10px 10px">
                   {"Admin"}
                 </Text>
-                           
-           </NavLink>}
-
-
+              </NavLink>
+            )}
           </HStack>
         </Box>
       </HStack>
