@@ -9,11 +9,13 @@ import Why from './components/Why';
 import Gifts from './components/Gifts';
 import Advertisement from './components/Advertisement';
 import Reviews from './components/Reviews';
+import Adgif from './components/Adgif';
 
 
 const LandingPage = () => {
   return (
     <div>
+        <Adgif/>
         <Banner/>
         <FlexItems/>
         <Why/>

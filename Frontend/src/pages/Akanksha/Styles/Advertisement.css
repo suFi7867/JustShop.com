@@ -1,4 +1,11 @@
 
+.advgif{
+   margin-top: 2rem;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+}
+
 .advBox{
     width:90%;
     margin: auto;
