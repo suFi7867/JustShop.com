@@ -5,6 +5,7 @@ import {
   compose,
 } from "redux";
 import thunk from "redux-thunk";
+import { adminReducer } from "./admin/admin.reducer";
 import { authReducer } from "./auth/auth.reducer";
 import { cartReducer } from "./cart/cart.reducer";
 import { productReducer } from "./products/product.reducer";
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   auth: authReducer,
   product: productReducer,
   cart: cartReducer,
+  admin: adminReducer
 });
 
 const createComposer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

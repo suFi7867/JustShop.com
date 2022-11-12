@@ -6,13 +6,15 @@ import {
 } from "./auth.types";
 
 let token = localStorage.getItem("token");
+// const AdminToken = "admin@gmail.com#admin";
 const initialState = {
   isAuth: false,
   token: token,
   loading: false,
   error: false,
+  AdminIsAuth: false,
 };
-
+// console.log(token);
 export const authReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case LOGIN_REQUEST: {
@@ -31,6 +33,7 @@ export const authReducer = (state = initialState, { type, payload }) => {
         token: payload,
         loading: false,
         error: false,
+        AdminIsAuth: payload.token == "admin@gmail.com#admin",
       };
     }
     case LOGIN_ERROR: {
@@ -39,7 +42,7 @@ export const authReducer = (state = initialState, { type, payload }) => {
         ...state,
         loading: false,
         error: true,
-        errorMessage:payload
+        errorMessage: payload,
       };
     }
     case LOGOUT: {

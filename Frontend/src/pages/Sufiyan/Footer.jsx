@@ -2,10 +2,11 @@ import React from "react";
 import styles from "./styles/footer.module.css";
 import { NavLink } from "react-router-dom";
 import { Divider, HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
+import { useSelector } from "react-redux";
 
 const Footer = () => {
-
-  const AdminIsAuth = false
+  const { token, isAuth, AdminIsAuth } = useSelector((store) => store.auth);
+  // const AdminIsAuth = false
 //  bg={AdminIsAuth ? "#025d93" : "#14244b"}
 
   return (
