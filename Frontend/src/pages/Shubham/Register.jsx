@@ -22,7 +22,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { registerUser } from "../../redux/register/register.actions";
 import Recaptcha from "./components/Recaptcha";
-// import Loader from "../components/SmallComponents/Loader";
+import Loading from "../Sufiyan/components/Loding";
 
 const Register = () => {
   const { isAuth } = useSelector((store) => store.auth);
@@ -30,6 +30,7 @@ const Register = () => {
     useSelector((store) => store.register);
   const dispatch = useDispatch();
   const [registerCreds, setRegisterCreds] = useState({});
+  const toast = useToast();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,19 +41,44 @@ const Register = () => {
   };
 
   const handleClick = () => {
-    dispatch(registerUser(registerCreds));
-    if (isRegistered) {
-      alert(successMessage);
+    if (
+      !registerCreds.name ||
+      !registerCreds.surname ||
+      !registerCreds.email ||
+      !registerCreds.password
+    ) {
+      toast({
+        title: "All fields are mandatory",
+        description: "Please fill all the details",
+        status: "error",
+        duration: 4000,
+        isClosable: true,
+      });
+    } else {
+      toast({
+        title: "Your account is created",
+        description: "We've created your account for you.",
+        status: "success",
+        duration: 4000,
+        isClosable: true,
+      });
+      dispatch(registerUser(registerCreds));
     }
   };
 
-  if (isAuth) {
-    return <Navigate to="/" />;
+  if (isRegistered) {
+    return <Navigate to="/login" />;
   }
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loading />;
   } else if (error) {
-    return <div>{errorMessage}</div>;
+    return toast({
+      title: "Wrong Credentials",
+      description: "Incorrect Email or Password",
+      status: "error",
+      duration: 4000,
+      isClosable: true,
+    });
   }
   return (
     <HStack w="full">
@@ -113,7 +139,7 @@ const Register = () => {
         </Stack>
         <Stack textAlign="left" spacing={3} w="full">
           <Recaptcha />
-          <Button       
+          <Button
             onClick={handleClick}
             w="full"
             colorScheme="facebook"

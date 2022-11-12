@@ -16,7 +16,7 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
 import { ACTION_DELETE_PRODUCT } from "../../../redux/admin/admin.actions";
 // import {AiFillStar} from "react-icons/ai"
-const ProductCard = ({
+const WomenCard = ({
   id,
   name,
   quantity,
@@ -71,13 +71,7 @@ const ProductCard = ({
         </Text>
       </Box>
 
-      <Image
-        margin={"auto"}
-        src={image}
-        onMouseEnter={() => setImage(hoverImage)}
-        onMouseOut={() => setImage(defaultImage)}
-        alt={name}
-      />
+      <Image margin={"auto"} src={defaultImage} alt={name} />
 
       <VStack align="revert-layer">
         <Text _hover={{ color: "#0D6DD7" }} fontSize="17" color="#1D1D1D">
@@ -140,4 +134,4 @@ const ProductCard = ({
     </Stack>
   );
 };
-export default ProductCard;
+export default WomenCard;

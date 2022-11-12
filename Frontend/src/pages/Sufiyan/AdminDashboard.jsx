@@ -7,7 +7,7 @@ import Orders from "./pages/Orders";
 
 const AdminDashboard = () => {
   return (
-    <HStack h="full" alignContent={"flex-start"}   justifyContent={"flex-start"}  alignItems={"flex-start"}>
+    <HStack>
       <SideBar menu={sidebar_menu} />
       <Outlet />
     </HStack>

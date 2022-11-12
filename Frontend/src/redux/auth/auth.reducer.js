@@ -51,6 +51,7 @@ export const authReducer = (state = initialState, { type, payload }) => {
         ...state,
         isAuth: false,
         token: "",
+        AdminIsAuth: false,
       };
     }
     default: {
