@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Circle,
   Divider,
   Drawer,
   DrawerBody,
@@ -57,17 +58,24 @@ const Links = [
     path: "/electronics",
   },
 
+
   {
     name: "About Us",
     path: "/about",
   },
+ 
 ];
 
 const Navbar = () => {
+
+  const AdminIsAuth = false
+
   const dispatch = useDispatch();
 
   const { data, loading, error } = useSelector((store) => store.product);
   const { token, isAuth } = useSelector((store) => store.auth);
+  const { data: cartData } = useSelector((store) => store.cart);
+
   let userName;
   if(isAuth){
     userName = token.token.split("#");
@@ -80,7 +88,7 @@ const Navbar = () => {
     }
   }, [isAuth]);
 
-  console.log(data);
+  //console.log(cartData.length);
 
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -94,7 +102,7 @@ const Navbar = () => {
   return (
     <Box style={{ position: "sticky", top: 0, zIndex: "999" }}>
       <HStack
-        bg="#14244b"
+        bg={AdminIsAuth ? "#025d93" : "#14244b"}
         style={{ position: "sticky", top: 0 }}
         p="0px 8%"
         justify="center"
@@ -126,14 +134,14 @@ const Navbar = () => {
 
           <HStack
             w={{ base: "full", md: "fit-content" }}
-            p={2}
+          
             justifyContent="space-around"
           >
-            <Box display={{ base: "none", md: "block" }}>
+            <Box visibility={{ base: "hidden", md: "visible" }}>
               <SearchBar />
             </Box>
           </HStack>
-          <Spacer />
+          <Spacer  display={{ base: "none", md: "block" }} />
 
           {!isAuth ? (
             <Box display={{ base: "none", md: "none", lg: "block" }}>
@@ -175,6 +183,8 @@ const Navbar = () => {
                     icon={<IoBagOutline />}
                   />
                 </NavLink>
+               
+              
                 <IconButton
                   fontSize="25px"
                   borderRadius={50}
@@ -218,17 +228,29 @@ const Navbar = () => {
                   //onClick={toggleColorMode}
                   icon={<VscHeart />}
                 />
+             
 
                 <NavLink to="/cart">
+                <HStack>
                   <IconButton
                     fontSize="25px"
                     borderRadius={50}
                     variant="link"
                     //onClick={toggleColorMode}
                     icon={<IoBagOutline />}
-                  />
+                    />
+                      <Text marginLeft={"-50px"} >
+                {cartData.length !== 0 ? <Circle 
+                minWidth={30} bg="white" 
+                 >{cartData.length}</Circle> : "" }
+                </Text>
+                       </HStack>
                 </NavLink>
-
+              
+               
+             
+                 
+              
                 <IconButton
                   fontSize="25px"
                   borderRadius={50}
@@ -247,11 +269,26 @@ const Navbar = () => {
           )}
 
           <HStack
-            display={{ base: "-webkit-inline-flex", md: "none", lg: "none" }}
+            display={{ base: "-webkit-inline-flex",
+             md: "none", lg: "none" }}
           >
+
+<NavLink to="/cart">
+               
+               <IconButton
+                 fontSize="25px"
+                 borderRadius={50}
+                 variant="link"
+                 //onClick={toggleColorMode}
+                 icon={<IoBagOutline />}
+                 />
+
+             </NavLink>
+
+
             <IconButton
-              variant="solid"
-              colorScheme="messenger"
+              variant="link"
+             
               fontSize="x-large"
               onClick={() =>
                 SetOpenSearch(OpenSearch == "none" ? "block" : "none")
@@ -259,14 +296,19 @@ const Navbar = () => {
               icon={<BiSearch />}
             ></IconButton>
 
+
+
             <IconButton
               onClick={() => onOpen()}
               icon={<AiOutlineMenu />}
             ></IconButton>
+
+
           </HStack>
         </HStack>
 
-        <Drawer placement="right" onClose={onClose} isOpen={isOpen} size="full">
+        <Drawer placement="right" 
+        onClose={onClose} isOpen={isOpen} size="full">
           <DrawerOverlay />
 
           <DrawerContent>
@@ -300,17 +342,12 @@ const Navbar = () => {
             <DrawerBody>
               {isAuth && (
                 <VStack>
-                  <Image
-                    borderRadius={12}
-                    marginTop="10px"
-                    w={150}
-                    src="https://i.im.ge/2022/07/29/FwZXw1.jpg"
-                  ></Image>
+                 
                   <HStack>
                     <Text fontSize="xl">
                       <ImAndroid />
                     </Text>
-                    <Text fontWeight="semibold">{"userName"}</Text>
+                    <Text fontWeight="semibold">{userName}</Text>
                   </HStack>
                 </VStack>
               )}
@@ -320,7 +357,7 @@ const Navbar = () => {
 
               <VStack>
                 {Links.map((el) => (
-                  <VStack w={"100%"}>
+                  <VStack w={"80%"}>
                     <NavLink
                       key={el.path}
                       to={el.path}
@@ -335,7 +372,7 @@ const Navbar = () => {
                         w={"100%"}
                         fontSize="20px"
                         fontWeight={"semibold"}
-                        p="10px 10px"
+                        p="10px 5px"
                       >
                         {el.name}
                       </Text>
@@ -343,6 +380,29 @@ const Navbar = () => {
                     <Divider />
                   </VStack>
                 ))}
+   <VStack w={"80%"}>
+                    <NavLink
+                      key={"el.padsdth"}
+                      to={"/cart"}
+                      w={"100%"}
+                      onClick={() => onClose()}
+                      className={({ isActive }) =>
+                        isActive ? "SmallactiveS" : "SmalldefaultS"
+                      }
+                      end
+                    >
+                      <Text
+                        w={"100%"}
+                        fontSize="20px"
+                        fontWeight={"semibold"}
+                        p="10px 5px"
+                      >
+                        Cart
+                      </Text>
+                    </NavLink>
+                    <Divider />
+                  </VStack>
+
               </VStack>
 
               {!isAuth ? (
@@ -387,17 +447,24 @@ const Navbar = () => {
       </HStack>
 
       <HStack
-        bg="#0d6dd7"
+      
+      justifyContent={{sm:"flex-end", xl:"center"}}
+        bg={AdminIsAuth ? "#025d93" : "#0d6dd7"}
         // style={{position:"sticky", top:0 }}
         p="0px 8%"
         justify="center"
         w="100%"
         h={{ base: "20px", md: "54px" }}
       >
-        <Box display={{ base: "none", md: "none", lg: "block" }}>
-          <HStack gap={50}>
+        <Box 
+        display={{ base: "none", md: "block", lg: "block" }}>
+          <HStack  
+          
+          w={"fit-content"}
+          gap={{base:10,md:"5px", lg:50}}>
             {Links.map((el) => (
               <NavLink
+             
                 key={el.path}
                 to={el.path}
                 className={({ isActive }) =>
@@ -405,11 +472,27 @@ const Navbar = () => {
                 }
                 end
               >
-                <Text fontSize="20px" color="whiteAlpha.900" p="10px 10px">
+                <Text   fontSize="20px" color="whiteAlpha.900" p="10px 10px">
                   {el.name}
                 </Text>
               </NavLink>
             ))}
+
+         { AdminIsAuth && <NavLink
+              key={"el.path"}
+              to={"/admin"}
+              className={({ isActive }) =>
+              isActive ? "activeS" : "defaultS"
+            }
+            end
+           >
+             <Text fontSize="20px" color="whiteAlpha.900" p="10px 10px">
+                  {"Admin"}
+                </Text>
+                           
+           </NavLink>}
+
+
           </HStack>
         </Box>
       </HStack>

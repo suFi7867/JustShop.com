@@ -77,7 +77,8 @@ export const ACTION_REMOVE_ITEM_CART = (payload=1)=> async (dispatch)=>{
                  token: payload.token
             }
         })
-        return dispatch({ type : REMOVE_CART_ITEMS_SUCCESS })
+        dispatch({ type : REMOVE_CART_ITEMS_SUCCESS })
+        return dispatch(ACTION_GET_CART(payload.token))
     }catch(err){
         dispatch({ type : REMOVE_CART_ITEMS_ERROR , payload : err.message })
     }

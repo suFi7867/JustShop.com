@@ -1,14 +1,20 @@
 import {
   Box,
+  Button,
+  Divider,
   Flex,
   Heading,
   HStack,
+  Image,
   Link,
   Stack,
+  Text,
   useColorModeValue as mode,
+  VStack,
 } from "@chakra-ui/react";
 import * as React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { CartItem } from "./CartItem";
 import { CartOrderSummary } from "./CartOrderSummary";
 import { cartData } from "./_data";
@@ -16,8 +22,51 @@ import { cartData } from "./_data";
 const Cart = () => { 
   const dispatch = useDispatch();
 
-  const { data } = useSelector((store) => store.cart);
+  
+ const navigate = useNavigate();
+
+ const BackToPRoductPage = () => {
+  navigate("/men-clothing")
+ 
+};
+
+
   const { token, isAuth } = useSelector((store) => store.auth);
+  const { data } = useSelector((store) => store.cart);
+
+
+   
+ if(data.length===0){
+
+  return (  
+
+
+
+          <Stack alignItems="center" p={15} direction={{base:"column", md:"row"}}   justify="center">
+
+          <Image src='https://img.pikbest.com/png-images/20191028/little-boy-pushing-a-shopping-cart-to-buy-things-gif_2515305.png!c1024wm0' />
+       
+         <VStack spacing={30} >
+         <Text fontSize="3xl" >Nothing In The Bag </Text>
+
+         <Divider />
+<Button  onClick={()=>BackToPRoductPage()} fontSize="x-large" padding={8}  colorScheme='messenger'> 
+Continue Shopping
+</Button>
+
+
+
+         </VStack>
+          </Stack>
+
+    
+    
+    ) 
+
+ }  
+
+
+
   return (
   
     <Box
@@ -58,8 +107,8 @@ const Cart = () => {
           }}
           flex="2"
         >
-          <Heading fontSize="2xl" fontWeight="extrabold">
-            Shopping Cart (3 items)
+          <Heading fontSize="2xl" >
+            Total Product in {data.length}
           </Heading>
 
           <Stack spacing="6">

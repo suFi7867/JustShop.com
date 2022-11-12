@@ -8,6 +8,9 @@ import MenProducts from '../pages/Ankit/MenProducts'
 import WomenProducts from '../pages/Ankit/WomenProducts'
 import Login from '../pages/Shubham/Login'
 import Register from '../pages/Shubham/Register'
+import AdminDashboard from '../pages/Sufiyan/AdminDashboard'
+
+import Orders from '../pages/Sufiyan/pages/Orders'
 import Payment from '../pages/Sufiyan/Payment'
 import PurchaseSucessfull from '../pages/Sufiyan/PurchaseSucessfull'
 import SingleProduct from '../pages/Sufiyan/SingleProduct'
@@ -46,7 +49,8 @@ const AllRoutes = () => {
             <Route path='/register' element={<Register/>} />
 
             <Route path='/about' element={<Team/>} />
-            
+
+        
 
 
             {/* NAVBAR IS DIFFERENT */}
@@ -61,6 +65,19 @@ const AllRoutes = () => {
 
             <Route path='/OrderSuccessfull' 
             element={<PurchaseSucessfull /> }  />
+
+
+
+      
+          <Route path='/admin' element={<AdminDashboard/>} >
+
+            <Route   index element={< Orders/>} />
+            <Route  exact path="orders" element={< Orders/>} />
+            <Route  exact path="dashboard" element={<div>SUFI</div>} />
+            <Route  exact path="locations" element={<div>SUFI</div>} />
+            <Route  exact path="profile" element={<div></div>} />
+          </Route>
+         
 
         </Routes>
       

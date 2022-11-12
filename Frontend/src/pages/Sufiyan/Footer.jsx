@@ -4,12 +4,19 @@ import { NavLink } from "react-router-dom";
 import { Divider, HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
 
 const Footer = () => {
+
+  const AdminIsAuth = false
+//  bg={AdminIsAuth ? "#025d93" : "#14244b"}
+
   return (
-    <VStack position={"relative"} bottom="0" w={"1400px"} id={styles.fooTerdivs}>
+    <VStack 
+    bg={AdminIsAuth ? "#025d93" : "#032448"} 
+    position={"relative"} bottom="0" w={"1400px"} id={styles.fooTerdivs}>
 
  
-      <VStack id={styles.fooTer} w="full"  >
-      
+      <VStack id={styles.fooTer} w="full" 
+     >
+       
         <Stack direction={{base:"column", md:"row" }}
         gap={{base:"20px", md:"none" }}
          alignItems="flex-start" w="full" justifyContent="space-around" >
