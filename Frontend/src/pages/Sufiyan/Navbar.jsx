@@ -269,7 +269,8 @@ const Navbar = () => {
           )}
 
           <HStack
-            display={{ base: "-webkit-inline-flex", md: "none", lg: "none" }}
+            display={{ base: "-webkit-inline-flex",
+             md: "none", lg: "none" }}
           >
 
 <NavLink to="/cart">
@@ -306,7 +307,8 @@ const Navbar = () => {
           </HStack>
         </HStack>
 
-        <Drawer placement="right" onClose={onClose} isOpen={isOpen} size="full">
+        <Drawer placement="right" 
+        onClose={onClose} isOpen={isOpen} size="full">
           <DrawerOverlay />
 
           <DrawerContent>
@@ -445,6 +447,8 @@ const Navbar = () => {
       </HStack>
 
       <HStack
+      
+      justifyContent={{sm:"flex-end", xl:"center"}}
         bg={AdminIsAuth ? "#025d93" : "#0d6dd7"}
         // style={{position:"sticky", top:0 }}
         p="0px 8%"
@@ -452,10 +456,15 @@ const Navbar = () => {
         w="100%"
         h={{ base: "20px", md: "54px" }}
       >
-        <Box display={{ base: "none", md: "none", lg: "block" }}>
-          <HStack gap={50}>
+        <Box 
+        display={{ base: "none", md: "block", lg: "block" }}>
+          <HStack  
+          
+          w={"fit-content"}
+          gap={{base:10,md:"5px", lg:50}}>
             {Links.map((el) => (
               <NavLink
+             
                 key={el.path}
                 to={el.path}
                 className={({ isActive }) =>
@@ -463,7 +472,7 @@ const Navbar = () => {
                 }
                 end
               >
-                <Text fontSize="20px" color="whiteAlpha.900" p="10px 10px">
+                <Text   fontSize="20px" color="whiteAlpha.900" p="10px 10px">
                   {el.name}
                 </Text>
               </NavLink>
