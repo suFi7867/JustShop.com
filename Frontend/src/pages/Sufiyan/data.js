@@ -8,7 +8,10 @@
 
 export let CartDataToMatch = [
 
-{id:1,name:"Symbol Men Casual Shirt",quantity:1,defaultImage:"https://i.ibb.co/X5fn1v7/71f-Dx-CFXJXL-SX569-SX-UX-SY-UY.jpg",hoverImage:"https://i.ibb.co/sFmzN2j/61-CF-f-F-1q-L-SX569-SX-UX-SY-UY.jpg",price:529,strikePrice:1390,rating:4,
+{id:1,name:"Symbol Men Casual Shirt",
+quantity:1,defaultImage:"https://i.ibb.co/X5fn1v7/71f-Dx-CFXJXL-SX569-SX-UX-SY-UY.jpg",
+hoverImage:"https://i.ibb.co/sFmzN2j/61-CF-f-F-1q-L-SX569-SX-UX-SY-UY.jpg",price:529,
+strikePrice:1390,rating:4,
 firstImages:["https://i.ibb.co/n10gPsZ/71f-Dx-CFXJXL-SX569-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/6BBvXfc/61-Gf-D31-Ro8-L-SX569-SX-UX-SY-UY.jpg",
 "https://i.ibb.co/DCgJQTK/81uf-VXh9x-TL-SX569-SX-UX-SY-UY.jpg",

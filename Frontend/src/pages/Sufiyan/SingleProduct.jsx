@@ -123,13 +123,12 @@ const SingleProduct = () => {
 
 //align="revert-layer"
  return (
-    <Stack  w="full"  margin="auto" alignSelf="center" justifyContent="center" direction={{base:"column", md:"row"}} spacing={{base:0, sm:30}} padding={5} justify="center" style={{  marginBottom:"50px"}} >
+    <Stack   w="full"  margin="auto" alignSelf="center" justifyContent="center" direction={{base:"column", md:"row"}} spacing={{base:0, sm:30}} padding={5} justify="center"
+     style={{  marginBottom:"50px"}} >
 
        <Stack  
        flexDirection={{base:"column-reverse", md:"row"}} spacing={5} padding={5}> 
 
-       
-         
             <Stack direction={{base:"row", md:"column"}}   maxH="500px"  padding={3} >
 
              <ChevronDownIcon display={{base:"none", md:"block"}} boxSize="30px" color="gray.500"  cursor="pointer" />
@@ -149,18 +148,18 @@ const SingleProduct = () => {
             <Image borderRadius={15} src={DefaultImg} maxH="500px" minW="200px" />
             <Stack w={"full"} >
             <ButtonGroup 
- size={{base:"xs", md:"sm"}}
+ size={{base:"xs", md:"xs"}}
  marginTop={{base:"-50px", md:"-50px"}}
-  marginRight={{base:"-250px", md:"0px"}}
+
 
          colorScheme='red' isAttached variant='solid'>
                      
                           <IconButton   borderRadius={50}
-                         fontSize={{base:"xl", md:"xx-large"}}
+                         fontSize={{base:"xl", md:"sl"}}
                            icon={<TbDiscount  />} />
 
                                
-                         <Button borderRadius={50}  fontWeight="bold"    fontSize={{base:"sm", md:"xl"}}  > {-((data.strikePrice - data.price) / data.strikePrice * 100 ).toFixed(2) }</Button>
+                         <Button borderRadius={50}  fontWeight="bold"    fontSize={{base:"sm", md:"sm"}}  > {-((data.strikePrice - data.price) / data.strikePrice * 100 ).toFixed(2) }</Button>
                       
   </ButtonGroup>
             </Stack>

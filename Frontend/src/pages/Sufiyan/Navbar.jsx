@@ -58,6 +58,7 @@ const Links = [
     path: "/electronics",
   },
 
+
   {
     name: "About Us",
     path: "/about",
@@ -87,7 +88,7 @@ const Navbar = () => {
     }
   }, [isAuth]);
 
-  console.log(cartData.length);
+  //console.log(cartData.length);
 
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -133,14 +134,14 @@ const Navbar = () => {
 
           <HStack
             w={{ base: "full", md: "fit-content" }}
-            p={2}
+          
             justifyContent="space-around"
           >
-            <Box display={{ base: "none", md: "block" }}>
+            <Box visibility={{ base: "hidden", md: "visible" }}>
               <SearchBar />
             </Box>
           </HStack>
-          <Spacer />
+          <Spacer  display={{ base: "none", md: "block" }} />
 
           {!isAuth ? (
             <Box display={{ base: "none", md: "none", lg: "block" }}>
@@ -270,9 +271,23 @@ const Navbar = () => {
           <HStack
             display={{ base: "-webkit-inline-flex", md: "none", lg: "none" }}
           >
+
+<NavLink to="/cart">
+               
+               <IconButton
+                 fontSize="25px"
+                 borderRadius={50}
+                 variant="link"
+                 //onClick={toggleColorMode}
+                 icon={<IoBagOutline />}
+                 />
+
+             </NavLink>
+
+
             <IconButton
-              variant="solid"
-              colorScheme="messenger"
+              variant="link"
+             
               fontSize="x-large"
               onClick={() =>
                 SetOpenSearch(OpenSearch == "none" ? "block" : "none")
@@ -280,10 +295,14 @@ const Navbar = () => {
               icon={<BiSearch />}
             ></IconButton>
 
+
+
             <IconButton
               onClick={() => onOpen()}
               icon={<AiOutlineMenu />}
             ></IconButton>
+
+
           </HStack>
         </HStack>
 
@@ -321,17 +340,12 @@ const Navbar = () => {
             <DrawerBody>
               {isAuth && (
                 <VStack>
-                  <Image
-                    borderRadius={12}
-                    marginTop="10px"
-                    w={150}
-                    src="https://i.im.ge/2022/07/29/FwZXw1.jpg"
-                  ></Image>
+                 
                   <HStack>
                     <Text fontSize="xl">
                       <ImAndroid />
                     </Text>
-                    <Text fontWeight="semibold">{"userName"}</Text>
+                    <Text fontWeight="semibold">{userName}</Text>
                   </HStack>
                 </VStack>
               )}
@@ -364,6 +378,29 @@ const Navbar = () => {
                     <Divider />
                   </VStack>
                 ))}
+   <VStack w={"80%"}>
+                    <NavLink
+                      key={"el.padsdth"}
+                      to={"/cart"}
+                      w={"100%"}
+                      onClick={() => onClose()}
+                      className={({ isActive }) =>
+                        isActive ? "SmallactiveS" : "SmalldefaultS"
+                      }
+                      end
+                    >
+                      <Text
+                        w={"100%"}
+                        fontSize="20px"
+                        fontWeight={"semibold"}
+                        p="10px 5px"
+                      >
+                        Cart
+                      </Text>
+                    </NavLink>
+                    <Divider />
+                  </VStack>
+
               </VStack>
 
               {!isAuth ? (
