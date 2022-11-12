@@ -14,8 +14,10 @@ import AdminDashboard from '../pages/Sufiyan/AdminDashboard'
 import Dashboard from '../pages/Sufiyan/Dashboard'
 
 import Orders from '../pages/Sufiyan/pages/Orders'
-import Payment from '../pages/Sufiyan/Payment'
-import PurchaseSucessfull from '../pages/Sufiyan/PurchaseSucessfull'
+// import Payment from '../pages/Sufiyan/Payment'
+// import PurchaseSucessfull from '../pages/Sufiyan/PurchaseSucessfull'
+import PaymentForm from "../pages/Akanksha/PaymentForm";
+import OrderSuccessfull from "../pages/Akanksha/OrderSuccessfull";
 import SingleProduct from '../pages/Sufiyan/SingleProduct'
 import Team from '../pages/Sufiyan/Team'
 
@@ -64,10 +66,10 @@ const AllRoutes = () => {
             element={ <h1>WishList</h1> } />
 
             <Route path='/checkout/payment' 
-            element={   <Payment /> } />
+            element={   <PaymentForm /> } />
 
             <Route path='/OrderSuccessfull' 
-            element={<PurchaseSucessfull /> }  />
+            element={<OrderSuccessfull /> }  />
 
 
 

@@ -7,8 +7,6 @@
 }
 
 .reviewBox{
-    display:flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap:2rem;
@@ -17,11 +15,11 @@
     padding:10px;
 }
 
-.comment{
+/* .comment{
     font-size:1rem;
-}
+} */
 
-.author{
+/* .author{
     font-size: 1rem;
     color:grey
-}
+} */
