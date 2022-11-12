@@ -19,7 +19,7 @@ const sidebar_menu = [
     {
         id: 3,
         icon: ShippingIcon,
-        path: 'locations',
+        path: 'products',
         title: 'Products',
     },
     {

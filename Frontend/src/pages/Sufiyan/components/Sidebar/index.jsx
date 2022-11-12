@@ -26,7 +26,7 @@ function SideBar ({ menu }) {
     }
 
     return(
-        <Box h="80vh" className='sidebar'>
+        <Box minW={"300px"} h="85vh" className='sidebar'>
             <Box marginTop={"50px"} className='sidebar-container'>
                 <VStack  marginBottom={"50px"} >
                     <Image w={"150px"}

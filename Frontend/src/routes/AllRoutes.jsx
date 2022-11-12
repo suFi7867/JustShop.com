@@ -9,6 +9,7 @@ import WomenProducts from '../pages/Ankit/WomenProducts'
 import Login from '../pages/Shubham/Login'
 import Register from '../pages/Shubham/Register'
 import AdminDashboard from '../pages/Sufiyan/AdminDashboard'
+import Dashboard from '../pages/Sufiyan/Dashboard'
 
 import Orders from '../pages/Sufiyan/pages/Orders'
 import Payment from '../pages/Sufiyan/Payment'
@@ -71,10 +72,10 @@ const AllRoutes = () => {
       
           <Route path='/admin' element={<AdminDashboard/>} >
 
-            <Route   index element={< Orders/>} />
+            <Route   index element={< Dashboard/>} />
+            <Route  exact path="dashboard" element={<Dashboard/>} />
             <Route  exact path="orders" element={< Orders/>} />
-            <Route  exact path="dashboard" element={<div>SUFI</div>} />
-            <Route  exact path="locations" element={<div>SUFI</div>} />
+            <Route  exact path="products" element={<div>SUFI</div>} />
             <Route  exact path="profile" element={<div></div>} />
           </Route>
          
