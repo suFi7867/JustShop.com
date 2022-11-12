@@ -1,8 +1,11 @@
 import React from 'react'
-import {productData} from "./components/data";
+import {productData} from "./components/data"
 import ProductCard from './components/ProductCard';
 import {  HStack,  SimpleGrid, Stack, Text, VStack } from '@chakra-ui/react'
+import { useSelector } from 'react-redux';
 const WomenProducts = () => {
+
+  const { data } = useSelector((store) => store.product);
   return (
     <Stack style={{marginTop: "20px"}} > 
               

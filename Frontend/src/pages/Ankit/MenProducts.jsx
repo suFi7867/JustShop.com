@@ -1,9 +1,18 @@
-import React from 'react'
-import {productData} from "./components/data";
+import React, { useEffect } from 'react'
+import {productData} from "./components/data"
 import ProductCard from './components/ProductCard';
 import {  HStack,  SimpleGrid, Stack, Text, VStack } from '@chakra-ui/react'
+import { useDispatch, useSelector } from 'react-redux';
+import { ACTION_GET_PRODUCTS } from '../../redux/products/product.actions';
 
 const MenProducts = () => {
+  // const dispatch=useDispatch();
+  // const { data } = useSelector((store) => store.product);
+  // useEffect(() => {
+  //   dispatch(ACTION_GET_PRODUCTS());
+    
+  // }, []);
+
   return (
     <Stack style={{marginTop: "20px"}} > 
               

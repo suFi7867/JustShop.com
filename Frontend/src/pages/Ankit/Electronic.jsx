@@ -1,11 +1,15 @@
-import React from 'react'
-import {productData} from "./components/data";
+import React, { useEffect } from 'react'
+import {productData} from "./components/data"
 import ProductCard from './components/ProductCard';
 import {  HStack,  SimpleGrid, Stack, Text, VStack } from '@chakra-ui/react'
+import { useDispatch, useSelector } from 'react-redux';
+
 
 const Electronic = () => {
 
+  const { data } = useSelector((store) => store.product);
 
+ 
   return (
     <Stack style={{marginTop: "20px"}} > 
               
