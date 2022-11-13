@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const electronicSchema = new mongoose.Schema({
-  id: { type: String, require: true },
+  id: { type: Number, require: true },
   name: { type: String },
   quantity: { type: String },
   defaultImage: { type: String },

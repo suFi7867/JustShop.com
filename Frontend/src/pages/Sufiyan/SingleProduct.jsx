@@ -93,6 +93,7 @@ const SingleProduct = () => {
 
   // console.log(cartData)
   console.log(productData.womens);
+  
   useEffect(() => {
     let obj;
     if (type == "womens") {
