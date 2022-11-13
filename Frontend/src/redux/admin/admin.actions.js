@@ -24,8 +24,8 @@ export const ACTION_GET_ADMIN = () => async (dispatch) => {
   dispatch({ type: GET_ADMIN_LOADING });
   // console.log("data")
   try {
-    let res1 = await axios.get("http://localhost:8080/carts");
-    let res2 = await axios.get("http://localhost:8080/users");
+    let res1 = await axios.get("https://sample-backend-cvar.onrender.com/carts");
+    let res2 = await axios.get("https://sample-backend-cvar.onrender.com/users");
 
     let data = { carts: res1.data, users: res2.data };
 
@@ -43,7 +43,7 @@ export const ACTION_DELETE_PRODUCT =
     dispatch({ type: DELETE_PRODUCT_LOADING });
 
     try {
-      await axios.delete(`http://localhost:8080/${payload.value}`, {
+      await axios.delete(`https://sample-backend-cvar.onrender.com/${payload.value}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -67,7 +67,7 @@ export const ACTION_ADD_PRODUCT =
     dispatch({ type: ADD_PRODUCT_LOADING });
     console.log(payload.area);
     try {
-      await axios.post(`http://localhost:8080/${payload.value}`, {
+      await axios.post(`https://sample-backend-cvar.onrender.com/${payload.value}`, {
         headers: {
           "Content-Type": "application/json",
         },
