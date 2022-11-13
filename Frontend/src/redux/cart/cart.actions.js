@@ -22,7 +22,7 @@ import {
 export const ACTION_GET_CART = (token) => async (dispatch) => {
   dispatch({ type: GET_CART_ITEMS_LOADING });
   try {
-    let res = await axios.get("http://localhost:8080/cart");
+    let res = await axios.get("https://sample-backend-cvar.onrender.com/cart");
     //   console.log(res.data)
     const unique = res.data.find((el) => el.token == token);
     // console.log(unique)
@@ -38,7 +38,7 @@ export const ACTION_ADD_ITEM_TO_CART =
     dispatch({ type: ADD_ITEM_TO_CART_LOADING });
 
     try {
-      await axios.post("http://localhost:8080/cart", payload);
+      await axios.post("https://sample-backend-cvar.onrender.com/cart", payload);
       //  console.log(res.data)
       return dispatch({
         type: ADD_ITEM_TO_CART_SUCCESS,
@@ -57,7 +57,7 @@ export const ACTION_ADD_ITEM_TO_CART =
 //     dispatch({ type: REMOVE_CART_ITEMS_LOADING });
 
 //     try {
-//       await axios.post(`http://localhost:8080/cart/${payload.id}`, payload);
+//       await axios.post(`https://sample-backend-cvar.onrender.com/cart/${payload.id}`, payload);
 //       //console.log(payload);
 //       return dispatch({ type: REMOVE_CART_ITEMS_SUCCESS });
 //     } catch (err) {
@@ -68,7 +68,7 @@ export const ACTION_REMOVE_ITEM_CART = (payload=1)=> async (dispatch)=>{
     dispatch({ type: REMOVE_CART_ITEMS_LOADING})
    
     try{
-        await axios.delete(`http://localhost:8080/cart`, {
+        await axios.delete(`https://sample-backend-cvar.onrender.com/cart`, {
             headers : {
                 "Content-Type" : "application/json"
             },

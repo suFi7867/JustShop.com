@@ -9,7 +9,7 @@ import {
 export const login = (creds) => async (dispatch) => {
   dispatch({ type: LOGIN_REQUEST });
   try {
-    let res = await axios.post("http://localhost:8080/user/login", creds);
+    let res = await axios.post("https://sample-backend-cvar.onrender.com/user/login", creds);
     dispatch({ type: LOGIN_SUCCESS, payload: res.data });
     
     return res.data;

@@ -10,12 +10,7 @@ const sidebar_menu = [
         path: 'dashboard',
         title: 'Dashboard',
     },
-    {
-        id: 2,
-        icon: ProductIcon,
-        path: 'orders',
-        title: 'Orders',
-    },
+   
     {
         id: 3,
         icon: ShippingIcon,

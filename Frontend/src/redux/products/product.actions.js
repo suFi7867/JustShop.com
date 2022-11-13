@@ -17,9 +17,9 @@ export const ACTION_GET_PRODUCTS = () => async (dispatch) => {
   dispatch({ type: GET_PRODUCTS_LOADING });
   // console.log("data")
   try {
-    let res1 = await axios.get("http://localhost:8080/mens");
-    let res2 = await axios.get("http://localhost:8080/womens");
-    let res3 = await axios.get("http://localhost:8080/electronics");
+    let res1 = await axios.get("https://sample-backend-cvar.onrender.com/mens");
+    let res2 = await axios.get("https://sample-backend-cvar.onrender.com/womens");
+    let res3 = await axios.get("https://sample-backend-cvar.onrender.com/electronics");
 
     let data = { mens: res1.data, womens: res2.data, electronics: res3.data };
 
