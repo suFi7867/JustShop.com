@@ -76,6 +76,7 @@ const Navbar = () => {
   const { data: cartData } = useSelector((store) => store.cart);
 
   let userName;
+  
   if (isAuth) {
     userName = token.token.split("#");
     userName = userName[0];

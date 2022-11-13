@@ -11,10 +11,10 @@ const Loading = () => {
          <div className={styles.loadingCSS} >
            <img
              width="100%"
-             src="https://images.bewakoof.com/web/bwkf-loading-anim-common.gif"
+             src="https://flevix.com/wp-content/uploads/2020/01/Bounce-Bar-Preloader-1.gif"
              alt="loading..."
              />
-          <h1 style={{fontSize :"50px", marginTop : "-50px"}} >suFi</h1>
+       
          </div>
       </Stack>
 

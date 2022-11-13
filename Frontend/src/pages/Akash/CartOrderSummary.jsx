@@ -26,7 +26,7 @@ const OrderSummaryItem = (props) => {
 
 export const CartOrderSummary = () => {
   const { data } = useSelector((store) => store.cart);
-  const total = data.reduce((a, b) => a + b.price, 0);
+  const total = data.reduce((a, b) => a + +b.price, 0);
 
  
 

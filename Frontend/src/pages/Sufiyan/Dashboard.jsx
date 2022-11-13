@@ -12,7 +12,7 @@ const Dashboard = () => {
 
   let Income = 0
 
-  adminData.carts.map((el) => el.cartData.map((x) => Income += x.price));
+  adminData.carts.map((el) => el.cartData.map((x) => Income += +x.price));
 
   console.log(Income)
 
@@ -91,7 +91,7 @@ const Dashboard = () => {
             <div className="charts__left__title">
               <div>
                 <h1>Daily Reports</h1>
-                <p>Cupertino, California, USA</p>
+                <p>Bangalore, India</p>
               </div>
               <i className="fa fa-usd" aria-hidden="true"></i>
             </div>
@@ -102,7 +102,7 @@ const Dashboard = () => {
             <div className="charts__right__title">
               <div>
                 <h1>Stats Reports</h1>
-                <p>Cupertino, California, USA</p>
+                <p>Bangalore, India</p>
               </div>
               <i className="fa fa-usd" aria-hidden="true"></i>
             </div>

@@ -35,10 +35,14 @@ const ProductCard = ({
   const { AdminIsAuth } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
   const toast = useToast();
+
+
   // const AdminIsAuth=false;
   // navigating to singleProduct page
   const navigateToSingleProductPage = (id) => {
+
     navigate(`/products/${value}/${id}`);
+
   };
 
   const deleteProduct = (id) => {
