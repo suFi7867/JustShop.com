@@ -135,7 +135,7 @@ its Fully Responsive e-commerce web application that allows you to buy shoes & c
   
   </tr>
     <tr>
-        <td><img src="https://i.ibb.co/KbWyBRq/mobile-1.png"  alt="descriptionDark" /></td>
+        <td><img src="https://ibb.co/2sWPTQz"  alt="descriptionDark" /></td>
     <td><img src="https://i.ibb.co/rHQwR06/mobile-2.png"   alt="description" /></td>
   
   </tr>
