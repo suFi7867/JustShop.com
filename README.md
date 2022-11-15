@@ -107,8 +107,8 @@ its Fully Responsive e-commerce web application that allows you to buy shoes & c
 
 <table>
   <tr>
-    <td><img src="https://i.ibb.co/dfqgMwd/1.png"  alt="home" /></td>
-    <td><img src="https://i.ibb.co/Ld6KDL8/2.png"  alt="coupons" /></td>
+    <td><img maxW="50%" src="https://i.ibb.co/dfqgMwd/1.png"  alt="home" /></td>
+    <td><img maxW="50%" src="https://i.ibb.co/Ld6KDL8/2.png"  alt="coupons" /></td>
   </tr>
   <tr>
    <td><img src="https://i.ibb.co/h1qrXBz/3.png"  alt="allProducts" /></td>
@@ -135,8 +135,8 @@ its Fully Responsive e-commerce web application that allows you to buy shoes & c
   
   </tr>
     <tr>
-        <td><img src="https://ibb.co/2sWPTQz"  alt="descriptionDark" /></td>
-    <td><img src="https://i.ibb.co/rHQwR06/mobile-2.png"   alt="description" /></td>
+        <td><img maxW="100%" src="https://i.ibb.co/8dqSn8t/justshop4.png" alt="justshop4"  /></td>
+    <td><img maxW="50%" src="https://i.ibb.co/rHQwR06/mobile-2.png"   alt="description" /></td>
   
   </tr>
 
