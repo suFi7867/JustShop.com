@@ -99,6 +99,7 @@ its Fully Responsive e-commerce web application that allows you to buy shoes & c
 - Order Summary
 
 <br />
+
 ## Glimpses of JustShop.com 🙈 :
 
 
@@ -106,28 +107,37 @@ its Fully Responsive e-commerce web application that allows you to buy shoes & c
 
 <table>
   <tr>
-    <td><img src="https://i.ibb.co/FDBxbh3/Capture1.png"  alt="home" /></td>
-    <td><img src="https://i.ibb.co/HPWYSFD/Capture2.png"  alt="coupons" /></td>
+    <td><img src="https://i.ibb.co/dfqgMwd/1.png"  alt="home" /></td>
+    <td><img src="https://i.ibb.co/Ld6KDL8/2.png"  alt="coupons" /></td>
   </tr>
   <tr>
-   <td><img src="https://i.ibb.co/hYxHq1X/Capture3.png"  alt="allProducts" /></td>
-    <td><img src="https://i.ibb.co/PwN1BXc/Capture4.png"  alt="men" /></td>
+   <td><img src="https://i.ibb.co/h1qrXBz/3.png"  alt="allProducts" /></td>
+    <td><img src="https://i.ibb.co/1rgKjBN/4.png"  alt="men" /></td>
   </tr>
   <tr>
-    <td><img src="https://i.ibb.co/DgKv24V/Capture11.png" height="300px" alt="allProducts" /></td>
-    <td><img src="https://i.ibb.co/Cz01hGD/Capture12.png"  alt="men" /></td>
+    <td><img src="https://i.ibb.co/hgKzhx8/5.png" alt="allProducts" /></td>
+    <td><img src="https://i.ibb.co/Ssqqj5b/6.png"  alt="men" /></td>
   </tr>
   <tr>
-    <td><img src="https://i.ibb.co/m8MMQXp/Capture5.png"  alt="women" /></td>
-    <td><img src="https://i.ibb.co/dt1VbjM/Capture6.png"  alt="kids" /></td>
+    <td><img src="https://i.ibb.co/2YpTQ8F/7.png"  alt="women" /></td>
+    <td><img src="https://i.ibb.co/qgxgjTX/8.png"  alt="kids" /></td>
   </tr>
    <tr>
-    <td><img src="https://i.ibb.co/7Nvrd2x/Capture9.png"   alt="women" /></td>
-    <td><img src="https://i.ibb.co/TmCf3fr/Capture10.png"   alt="kids" /></td>
+    <td><img src="https://i.ibb.co/w7QMFSm/9.png"   alt="women" /></td>
+    <td><img src="https://i.ibb.co/jVrqM5N/admin-1.png"   alt="kids" /></td>
   </tr>
   <tr>
-    <td><img src="https://i.ibb.co/ypKg5zz/Capture7.png"  alt="description" /></td>
-    <td><img src="https://i.ibb.co/PWsJSyG/Capture8.png"  alt="descriptionDark" /></td>
+    <td><img src="https://i.ibb.co/V2C33MP/admin-2.png"  alt="description" /></td>
+    <td><img src="https://i.ibb.co/r6ZFyXN/admin-3.png"   alt="descriptionDark" /></td>
+  </tr>
+    <tr>
+    <td><img src="https://i.ibb.co/XW6J312/admin5.png"   alt="description" /></td>
+  
+  </tr>
+    <tr>
+        <td><img src="https://i.ibb.co/KbWyBRq/mobile-1.png"  alt="descriptionDark" /></td>
+    <td><img src="https://i.ibb.co/rHQwR06/mobile-2.png"   alt="description" /></td>
+  
   </tr>
 
 </table>
