@@ -78,10 +78,17 @@ Bewakoof.com Clone is ReactJS e-commerce web application that allows you to buy 
 - Single Product Page
 
 
+
 <br />
 
 
-## 🚀 Features
+## 🚀 Admin Features
+- All Statistics and Revenue Generated 
+- All Users Data
+- Can Delete Product From DB
+- Can Add Product to DB
+ 
+## 🚀 User Features
 - Login and Signup User Account
 - Product Sorting Based on Price, Rating and Name
 - My Orders Section for details of all ordered item
@@ -92,8 +99,7 @@ Bewakoof.com Clone is ReactJS e-commerce web application that allows you to buy 
 - Order Summary
 
 <br />
-
-## Glimpses of Bewakoof-Clone 🙈 :
+## Glimpses of JustShop.com 🙈 :
 
 
 
