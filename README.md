@@ -151,8 +151,6 @@ its Fully Responsive e-commerce web application that allows you to buy shoes & c
 This project was built using React, Chakra UI, HTML, CSS, JavaScript, Rest API . It is an e-commerce web application and for running on your local environment you should follow these guidelines.
 
 
-# PROJECT VERCEL LINK
-https://bewakoof-clone-sufi.vercel.app/
 
 # Getting Started with Create React App
 
