@@ -13,6 +13,16 @@ const data = [
   linkedin : "https://www.linkedin.com/in/sufiyan-shaikh-9bb808183/" ,
   portfolio : "https://sufi7867.github.io/"
 },
+
+{
+  name : "Ankit Singh" ,
+  type : "Full Stack",
+  url :"https://i.ibb.co/jDnX9fz/1657341895619.jpg",
+  github : "https://github.com/Ankitsingh9584",
+  linkedin : "https://www.linkedin.com/in/ankit-singh-rajawat-08579521a/" ,
+  portfolio : "https://ankitsingh9584.github.io/"
+},
+
 {
   name : "Shubham Gaikwad" ,
   type : "Backend Expert",
@@ -32,14 +42,13 @@ const data = [
 },
 
 {
-  name : "Ankit Singh" ,
+  name : "Akash Gupta" ,
   type : "Full Stack",
-  url :"https://i.ibb.co/jDnX9fz/1657341895619.jpg",
-  github : "https://github.com/Ankitsingh9584",
-  linkedin : "https://www.linkedin.com/in/ankit-singh-rajawat-08579521a/" ,
-  portfolio : "https://ankitsingh9584.github.io/"
+  url :"https://avatars.githubusercontent.com/u/101566767?v=4",
+  github : "https://github.com/Aakash928",
+  linkedin : "https://www.linkedin.com/in/akash-g928/" ,
+  portfolio : "https://aakash928.github.io/"
 },
-
 
 ]
 
