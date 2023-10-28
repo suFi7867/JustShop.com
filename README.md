@@ -46,7 +46,6 @@
 
 <h3 align="center"><a href="https://justshop-unit5-project.netlify.app/"><strong>Want to see live preview »</strong></a></h3>
 
-<h3 align="center"><a href="https://www.linkedin.com/feed/update/urn:li:activity:6997582095241875457/"><strong>Demo Video »</strong></a></h3>
 
 
 <br />
@@ -196,7 +195,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## Contact
 
 If you want to contact me, you can reach me through below handles. <br />
-[![linkedin](https://img.shields.io/badge/Sufiyan_Shaikh-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sufiyan-shaikh-9bb808183/)
 [![GitHub](https://img.shields.io/badge/Sufiyan_Shaikh-20232A?style=for-the-badge&logo=Github&logoColor=white)](https://github.com/suFi7867)
 
 
